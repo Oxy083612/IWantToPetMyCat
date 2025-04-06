@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blwpgfyevwkl0"
-path="res://.godot/imported/Item-4.png-325779b291a99c500345d58da978b6b6.ctex"
+uid="uid://dfjixvj8q0ua"
+path="res://.godot/imported/Poduszka.png-3c66ddda11b0d42c396dcf95919853cb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Item-4.png"
-dest_files=["res://.godot/imported/Item-4.png-325779b291a99c500345d58da978b6b6.ctex"]
+source_file="res://images/items/big/Poduszka.png"
+dest_files=["res://.godot/imported/Poduszka.png-3c66ddda11b0d42c396dcf95919853cb.ctex"]
 
 [params]
 

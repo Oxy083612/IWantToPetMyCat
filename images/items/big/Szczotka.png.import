@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkd2d1pmo2wto"
-path="res://.godot/imported/Item-6.png-0d57afcde58ca4e70951aa1e70178287.ctex"
+uid="uid://d1nlv8w8qkf4j"
+path="res://.godot/imported/Szczotka.png-5a34c2a83107e56fe9ada1f2a6a450d6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/Item-6.png"
-dest_files=["res://.godot/imported/Item-6.png-0d57afcde58ca4e70951aa1e70178287.ctex"]
+source_file="res://images/items/big/Szczotka.png"
+dest_files=["res://.godot/imported/Szczotka.png-5a34c2a83107e56fe9ada1f2a6a450d6.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dro7nevn48165"
-path="res://.godot/imported/stick.png-45a5472d17f5f37355662c0b7eb54b34.ctex"
+uid="uid://bxos4yqa7f5g8"
+path="res://.godot/imported/Klapek.png-1e9de131c13fc5d723ab511cff05f87c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/stick.png"
-dest_files=["res://.godot/imported/stick.png-45a5472d17f5f37355662c0b7eb54b34.ctex"]
+source_file="res://images/items/big/Klapek.png"
+dest_files=["res://.godot/imported/Klapek.png-1e9de131c13fc5d723ab511cff05f87c.ctex"]
 
 [params]
 

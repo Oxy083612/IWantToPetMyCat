@@ -14,12 +14,27 @@ signal change_item(item)
 var number_of_items
 
 #linijka, długopis, łapka na muchy, patyk, kij, taśma, duct tape, pilot do telewizora, szczotka do kibla, 
-
+var min_tapes = 2
+var tapes = ["glue", "ductTape", "isolationTape"]
 
 func _ready():		
 	var number_of_items = (int) ((item_space_list.size() * 3) / 4)
 	item_space_list_tmp = item_space_list.duplicate(true)
-	for x in range(number_of_items):
+	
+	var chosen_tapes = 0
+	while chosen_tapes < min_tapes:
+		var choice = randi() % item_space_list_tmp.size()
+		var tmp = item_space_list_tmp.pick_random()
+		item_space_list_tmp.erase(tmp)
+		tmp.add_child(item.instantiate())
+		item_list.append(tmp.get_node("Item"))
+		var item_tmp = tmp.get_node("Item")
+		var picked_item = _pick_tape()
+		item_space_list[choice].item = picked_item
+		emit_signal("change_item", picked_item)
+		chosen_tapes += 1
+	
+	for x in range(number_of_items - min_tapes):
 		var tmp = item_space_list_tmp.pick_random()
 		item_space_list_tmp.erase(tmp)
 		tmp.add_child(item.instantiate())
@@ -28,10 +43,14 @@ func _ready():
 		var picked_item = _pick_item_from_list()
 		item_space_list[x].item = picked_item
 		emit_signal("change_item", picked_item)
-		
+
+func _pick_tape():
+	var choice = tapes[randi() % tapes.size()]
+	return ItemsPool.items[choice]
+
 func _pick_item_from_list():
-	match randi_range(0, 1):
-		0:
-			return ItemsPool.items["stick"]
-		1:
-			return ItemsPool.items["ductTape"]
+	var keys = []
+	for key in ItemsPool.items.keys():
+		keys.append(key)
+	var choice = keys[randi() % keys.size()]
+	return ItemsPool.items[choice]

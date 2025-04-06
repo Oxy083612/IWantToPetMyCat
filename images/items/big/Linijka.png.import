@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://blealtr77iavy"
-path="res://.godot/imported/DuctTape.png-5bd5ea7f2962af5ad2cf12a0f85d0238.ctex"
+uid="uid://cn2exp0x6g6jx"
+path="res://.godot/imported/Linijka.png-77efc8baac068c78c52ad9aa6e75d2fc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/DuctTape.png"
-dest_files=["res://.godot/imported/DuctTape.png-5bd5ea7f2962af5ad2cf12a0f85d0238.ctex"]
+source_file="res://images/items/big/Linijka.png"
+dest_files=["res://.godot/imported/Linijka.png-77efc8baac068c78c52ad9aa6e75d2fc.ctex"]
 
 [params]
 
