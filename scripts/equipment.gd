@@ -16,6 +16,12 @@ func _return_texture_name(item: String):
 	
 func _return_name(item: String):
 	return ItemsPool.items[item].get("name")
+
+func _return_durability(item: String):
+	return ItemsPool.items[item].get("durability")
+
+func _return_length(item: String):
+	return ItemsPool.items[item].get("length")
 	
 
 @export var tapes = 0

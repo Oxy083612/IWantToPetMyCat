@@ -14,24 +14,33 @@ extends Node2D
 var needed_length = 10
 var needed_durability = 5
 
+var durability = 0
+var length = 0
+
 var not_empty_slots = 0
 func _ready():
 	for item in Equipment.current_items:
 		var i = 0
 		var new_item = item_slot.instantiate()
+		new_item.position = Vector2(randi_range(100, 1820), randi_range(540, 1080))
 		items.add_child(new_item)
 		new_item.item_slot_pressed.connect(_on_item_slot_add)
-		if item.length == 1:
+		if Equipment._return_length(item) == 1:
 			items.get_child(i).add_child(item_length_1.instantiate())
-			new_item.get_child(0).get_node("Sprite2D").texture = item["texture"]
+			new_item.get_child(0).get_node("Sprite2D").texture = load(Equipment._return_texture_name(item))
 			i+=1
 		else:
 			items.get_child(i).add_child(item_length_1.instantiate())
-			new_item.get_child(0).get_node("Sprite2D").texture = item["texture"]
+			new_item.get_child(0).get_node("Sprite2D").texture = load(Equipment._return_texture_name(item))
 			i+=1
-		
-func _on_item_slot_add():
-	
+
+func _physics_process(delta: float) -> void:
+	pass
+
+func _on_item_slot_add(item_name):
+	print("bu")
+	length += Equipment._return_length(item_name)
+	durability += Equipment._return_durability(item_name)
 	pass
 	
 	
@@ -40,29 +49,6 @@ func _input(event):
 		get_tree().quit()	
 
 
-
-func _physics_process(delta: float) -> void:
-	var length = 0.0
-	var durability = 0.0
-	var used_items = 0
-	var hand_skeleton = []
-	var hand_end
-	for x in items.get_children():
-		var y = x.get_child(0)
-		if x != null and y != null:
-			length += slot.item["length"]
-			durability += slot.item["durability"]
-			used_items += 1
-	hand.set_parts(hand_skeleton, hand_end)
-	durability /= used_items
-	length_label.text = "Length\n" + str(length) + "/" + str(needed_length)
-	length_bar.set_value((min(length, needed_length) * 100) / needed_length)
-	if used_items > 0:
-		durability_label.text = "Durability\n" + str(durability) + "/" + str(needed_durability)
-		durability_bar.set_value(min(durability, needed_durability) / needed_durability * 100)
-	else:
-		durability_label.text = "Durability\n" + "0/" + str(needed_durability)
-		durability_bar.set_value(0)
 		
 
 	
