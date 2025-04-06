@@ -1,0 +1,67 @@
+[gd_scene load_steps=14 format=3 uid="uid://b2lsqf32vstun"]
+
+[ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="1_m415t"]
+[ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat_scene.gd" id="1_qtqs3"]
+[ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="3_casq0"]
+[ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="4_vy30t"]
+[ext_resource type="Texture2D" uid="uid://bn3y23mflbni0" path="res://images/cat/Cat-3.png" id="5_38ukf"]
+[ext_resource type="Texture2D" uid="uid://cqu0iqfg72xlc" path="res://images/cat/Cat-4.png" id="6_s2lfo"]
+[ext_resource type="Texture2D" uid="uid://d2g78vcf6kptp" path="res://images/cat/Cat-5.png" id="7_fdbq7"]
+[ext_resource type="Texture2D" uid="uid://cjuxf0k2y3qbk" path="res://images/cat/Cat-6.png" id="8_wcw5g"]
+[ext_resource type="Texture2D" uid="uid://dhclqm2bel2kk" path="res://images/cat/Cat-7.png" id="9_tm2ul"]
+[ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_ab1e5"]
+[ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_qiqcv"]
+[ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_b3ycj"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_casq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_vy30t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_38ukf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s2lfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fdbq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_wcw5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_tm2ul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_ab1e5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_qiqcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_b3ycj")
+}],
+"loop": true,
+"name": &"Cat doing cat stuff",
+"speed": 5.0
+}]
+
+[node name="PatPatScene" type="Node2D"]
+script = ExtResource("1_qtqs3")
+
+[node name="Background" type="Sprite2D" parent="."]
+position = Vector2(961, 541)
+scale = Vector2(8.2, 8.2)
+texture = ExtResource("1_m415t")
+
+[node name="Cat" type="AnimatedSprite2D" parent="."]
+position = Vector2(969, 541)
+scale = Vector2(8.2, 8.2)
+sprite_frames = SubResource("SpriteFrames_b64y2")
+animation = &"Cat doing cat stuff"
+autoplay = "Cat doing cat stuff"
