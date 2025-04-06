@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
-[ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="5_6lf41"]
+[ext_resource type="Script" path="res://scripts/tape_counter.gd" id="5_6lf41"]
 [ext_resource type="Texture2D" uid="uid://ddvc7m7c441qh" path="res://images/items/small/Item-2.png" id="5_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="6_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="7_mynug"]

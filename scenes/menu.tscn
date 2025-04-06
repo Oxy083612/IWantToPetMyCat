@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://bld3xdv1s1sma"]
+[gd_scene load_steps=21 format=3 uid="uid://bld3xdv1s1sma"]
 
 [ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu.gd" id="1_yqeox"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="2_3dmrc"]
 [ext_resource type="Texture2D" uid="uid://cxxawyl1enckt" path="res://images/hud/start.png" id="2_v86rl"]
 [ext_resource type="Texture2D" uid="uid://bj5yvj1dcnh20" path="res://images/hud/start_clic.png" id="3_13sgg"]
 [ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="3_81l6r"]
+[ext_resource type="Texture2D" uid="uid://s68ih8jw2xd7" path="res://images/items/napis_Obszar_roboczy_1.png" id="3_rsfmq"]
 [ext_resource type="Texture2D" uid="uid://1cs16mu8knpq" path="res://images/hud/start_hover.png" id="4_i6lef"]
 [ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="4_rsfmq"]
 [ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="5_70i5f"]
@@ -70,6 +71,10 @@ script = ExtResource("1_yqeox")
 position = Vector2(961, 541)
 scale = Vector2(8.2, 8.2)
 texture = ExtResource("2_3dmrc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(961, 539)
+texture = ExtResource("3_rsfmq")
 
 [node name="Cat" type="AnimatedSprite2D" parent="."]
 position = Vector2(969, 541)
