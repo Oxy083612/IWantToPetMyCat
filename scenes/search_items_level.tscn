@@ -1,12 +1,14 @@
-[gd_scene load_steps=51 format=3 uid="uid://b6n7ve6wxkyir"]
+[gd_scene load_steps=53 format=3 uid="uid://b6n7ve6wxkyir"]
 
-[ext_resource type="Script" uid="uid://c1nvork2gn2r1" path="res://scripts/search_items_level.gd" id="1_df62o"]
+[ext_resource type="Script" path="res://scripts/search_items_level.gd" id="1_df62o"]
 [ext_resource type="PackedScene" uid="uid://dh5nyxp606mlk" path="res://scenes/hud_search_items.tscn" id="2_7pitd"]
 [ext_resource type="PackedScene" uid="uid://245n4b30il23" path="res://scenes/player.tscn" id="3_femh3"]
 [ext_resource type="PackedScene" uid="uid://07f74yx2l1ja" path="res://scenes/ItemGeneration.tscn" id="5_femh3"]
 [ext_resource type="PackedScene" uid="uid://ppcuj5rbu036" path="res://scenes/ItemSpace.tscn" id="6_7pitd"]
 [ext_resource type="Texture2D" uid="uid://dtvh4ahv1foj0" path="res://images/map.png" id="7_7pitd"]
 [ext_resource type="PackedScene" uid="uid://8od55wc1dycj" path="res://scenes/Table.tscn" id="7_254j5"]
+[ext_resource type="Texture2D" uid="uid://1m3elj8cf4ci" path="res://images/szafka.png" id="7_ysykw"]
+[ext_resource type="Texture2D" uid="uid://dtkli1or2un06" path="res://images/wieszak.png" id="8_wux0l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du432"]
 size = Vector2(72, 33)
@@ -48,7 +50,7 @@ size = Vector2(20, 162)
 size = Vector2(20, 175)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_aonke"]
-size = Vector2(58.5, 84.5)
+size = Vector2(46.5, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjfvr"]
 size = Vector2(33, 29)
@@ -113,7 +115,7 @@ size = Vector2(28, 38)
 size = Vector2(118, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kinds"]
-size = Vector2(130, 23)
+size = Vector2(130, 17)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5ixcw"]
 size = Vector2(90, 20)
@@ -142,7 +144,7 @@ script = ExtResource("1_df62o")
 [node name="HUDSearchItems" parent="." instance=ExtResource("2_7pitd")]
 
 [node name="Player" parent="." instance=ExtResource("3_femh3")]
-position = Vector2(2, 18)
+position = Vector2(0, -17)
 collision_mask = 3
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
@@ -170,8 +172,8 @@ position = Vector2(50, -5)
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-position = Vector2(205, 101)
-scale = Vector2(0.55, 0.55)
+position = Vector2(213, 100)
+scale = Vector2(1.7, 1.7)
 texture = ExtResource("7_7pitd")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
@@ -236,7 +238,7 @@ position = Vector2(438, 24.5)
 shape = SubResource("RectangleShape2D_2abog")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-215.25, 241.75)
+position = Vector2(-216, 273)
 shape = SubResource("RectangleShape2D_aonke")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
@@ -325,7 +327,7 @@ position = Vector2(79, 71.5)
 shape = SubResource("RectangleShape2D_wbpsd")
 
 [node name="CollisionShape2D38" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-128, 269.5)
+position = Vector2(-128, 272.5)
 shape = SubResource("RectangleShape2D_kinds")
 
 [node name="CollisionShape2D39" type="CollisionShape2D" parent="StaticBody2D"]
@@ -355,6 +357,18 @@ shape = SubResource("RectangleShape2D_18ejr")
 [node name="CollisionShape2D45" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(343, 182)
 shape = SubResource("RectangleShape2D_bekr3")
+
+[node name="Sprite2D2" type="Sprite2D" parent="StaticBody2D"]
+z_index = 100
+position = Vector2(214, 101)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("7_ysykw")
+
+[node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
+z_index = 100
+position = Vector2(212, 100)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("8_wux0l")
 
 [node name="Table" parent="." instance=ExtResource("7_254j5")]
 light_mask = 1
