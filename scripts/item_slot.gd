@@ -19,8 +19,6 @@ func set_item(new_item):
 	
 
 func _on_pressed() -> void:
-	if item_path == null:
-		return
 	if not is_used:
 		emit_signal("item_slot_pressed", item_name)
 		if Equipment.tapes == 0:

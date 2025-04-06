@@ -22,16 +22,16 @@ func _ready():
 	for item in Equipment.current_items:
 		var i = 0
 		var new_item = item_slot.instantiate()
-		new_item.position = Vector2(randi_range(100, 1820), randi_range(540, 1080))
+		new_item.set_item(item)
+		new_item.position = Vector2(randi_range(100, 1820), randi_range(540, 800))
 		items.add_child(new_item)
 		new_item.item_slot_pressed.connect(_on_item_slot_add)
+		
 		if Equipment._return_length(item) == 1:
 			items.get_child(i).add_child(item_length_1.instantiate())
-			new_item.get_child(0).get_node("Sprite2D").texture = load(Equipment._return_texture_name(item))
 			i+=1
 		else:
 			items.get_child(i).add_child(item_length_1.instantiate())
-			new_item.get_child(0).get_node("Sprite2D").texture = load(Equipment._return_texture_name(item))
 			i+=1
 
 func _physics_process(delta: float) -> void:
@@ -46,9 +46,7 @@ func _on_item_slot_add(item_name):
 	
 func _input(event):
 	if event.is_action_pressed("quit"):
-		get_tree().quit()	
-
-
+		get_tree().quit()  
 		
 
 	
