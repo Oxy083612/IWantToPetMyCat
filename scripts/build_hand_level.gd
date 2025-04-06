@@ -13,11 +13,6 @@ extends Node2D
 @onready var lastPosition = Hand.global_position
 @onready var targetPosition = Hand.global_position
 
-var needed_length = 10
-var needed_durability = 5
-
-var durability = 0
-var length = 0
 
 var not_empty_slots = 0
 func _ready():
@@ -34,7 +29,9 @@ func _physics_process(delta: float) -> void:
 	pass
 
 func _on_item_slot_pressed(item_name):
-	if(Equipment._return_length(item_name) == 1 && length < needed_length):
+	if(Equipment.tapes <= 0):
+		return
+	if(Equipment._return_length(item_name) == 1):
 		var item_big = item_length_1.instantiate()
 		Hand.add_child(item_big)
 		item_big.get_node("Sprite2D").texture = load(Equipment._return_texture_big_name(item_name))
@@ -48,7 +45,10 @@ func _on_item_slot_pressed(item_name):
 			sprite_tape.position = targetPosition
 		targetPosition = item_big.get_node("end").global_position
 		lastPosition = item_big.get_node("start").global_position
-		length += 1
+		Hand.current_items.append(item_name)
+		Hand.length += 1
+		Hand.durability += Equipment._return_durability(item_name)
+
 	else:
 		var item_big = item_length_2.instantiate()
 		Hand.add_child(item_big)
@@ -63,7 +63,15 @@ func _on_item_slot_pressed(item_name):
 			sprite_tape.position = targetPosition
 		targetPosition = item_big.get_node("end").global_position
 		lastPosition = item_big.get_node("start").global_position
-		length += 2
+		Hand.current_items.append(item_name)
+		Hand.length += 2
+		Hand.durability += Equipment._return_durability(item_name)
+	Equipment.tapes -= 1
+	Hand.real_durability = Hand.durability / len(Hand.current_items)
+	length_label.text = "Length\n" + str(Hand.length) + "/" + str(GameLoop.min_length)
+	durability_label.text = "Durability\n" + str(Hand.real_durability) + "/" + str(GameLoop.min_durability)
+	length_bar.value = min(Hand.length, GameLoop.min_length) * 100 / GameLoop.min_length
+	durability_bar.value = min(Hand.real_durability, GameLoop.min_durability) * 100 / GameLoop.min_durability
 	
 	
 	

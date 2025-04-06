@@ -1,7 +1,8 @@
 extends Node2D
 
-var length = 5
-var durability = 1
+var length = 0
+var durability = 0
+var real_durability = 0
 var current_length = 0
 var current_items = []
 
@@ -9,15 +10,16 @@ var current_items = []
 @onready var item_length_2: PackedScene = preload("res://scenes/item_length_2.tscn")
 @onready var item_slot: PackedScene = preload("res://scenes/item_slot.tscn")
 
-@onready var lastPosition = Hand.global_position
-@onready var targetPosition = Hand.global_position
+var lastPosition
+var targetPosition
 
 func _ready():
-	position.x = 128
-	position.y = 564
-	_draw()
+	global_position.x = 128
+	global_position.y = 564
+	lastPosition = global_position
+	targetPosition = global_position
 	
-func _draw():
+func draw_stick():
 	for item_name in current_items:
 		if(Equipment._return_length(item_name) == 1):
 			var item_big = item_length_1.instantiate()
