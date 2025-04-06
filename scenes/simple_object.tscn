@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://ggi5rj50swk7"]
+
+[ext_resource type="Texture2D" uid="uid://dojmykduujaql" path="res://temp_assets/sprites/world_tileset.png" id="1_4h24b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y7qnc"]
+size = Vector2(14, 15)
+
+[node name="SimpleObject" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_4h24b")
+region_enabled = true
+region_rect = Rect2(97, 16, 14, 15)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_y7qnc")

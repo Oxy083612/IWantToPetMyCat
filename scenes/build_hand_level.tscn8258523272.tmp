@@ -1,0 +1,164 @@
+[gd_scene load_steps=10 format=3 uid="uid://pc0tu2if1i0f"]
+
+[ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
+[ext_resource type="PackedScene" uid="uid://d2ux4wl6e04u" path="res://scenes/item_slot.tscn" id="3_mhwkx"]
+[ext_resource type="Texture2D" uid="uid://r0t4igewbis4" path="res://temp_assets/sprites/1px All.png" id="3_vwtov"]
+[ext_resource type="Texture2D" uid="uid://5x46wmlgjwx0" path="res://temp_assets/PastelUIFree.png" id="4_6lf41"]
+[ext_resource type="Texture2D" uid="uid://dwcqnpul2kfnh" path="res://icon.svg" id="5_lwwhj"]
+[ext_resource type="Texture2D" uid="uid://bk3kqx0v85pof" path="res://temp_assets/bars/Pixel1_Healthbar_0003_pixel1_healthbarcomplete.png" id="6_mynug"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ssq24"]
+atlas = ExtResource("3_vwtov")
+region = Rect2(69, 21, 12, 54)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrgcu"]
+atlas = ExtResource("4_6lf41")
+region = Rect2(183, 224, 52, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r30av"]
+atlas = ExtResource("4_6lf41")
+region = Rect2(13, 8, 88, 82)
+
+[node name="BuildHandLevel" type="Node2D"]
+script = ExtResource("1_3efjt")
+
+[node name="HandEnd" type="Node2D" parent="."]
+position = Vector2(241, 592)
+
+[node name="Sprite2D" type="Sprite2D" parent="HandEnd"]
+rotation = 1.5708
+scale = Vector2(6, 6)
+texture = SubResource("AtlasTexture_ssq24")
+
+[node name="ItemSlots" type="HBoxContainer" parent="."]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 369.0
+offset_top = 921.0
+offset_right = 485.0
+offset_bottom = 961.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(10.1136, 3.83579)
+
+[node name="ItemSlot" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="ItemSlot6" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="ItemSlot5" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="ItemSlot2" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="ItemSlot3" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="ItemSlot4" parent="ItemSlots" instance=ExtResource("3_mhwkx")]
+layout_mode = 2
+
+[node name="TapeCounter" type="NinePatchRect" parent="."]
+offset_left = 48.0
+offset_top = 37.0
+offset_right = 88.0
+offset_bottom = 77.0
+scale = Vector2(6.07536, 2.46888)
+texture = SubResource("AtlasTexture_mrgcu")
+
+[node name="TextureRect" type="TextureRect" parent="TapeCounter"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -14.6517
+offset_top = -16.7597
+offset_right = 113.348
+offset_bottom = 111.24
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.10092, 0.22546)
+texture = ExtResource("5_lwwhj")
+
+[node name="Label" type="Label" parent="TapeCounter"]
+layout_mode = 0
+offset_left = 2.63359
+offset_right = 18.6336
+offset_bottom = 23.0
+scale = Vector2(0.678065, 1.43574)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "5"
+
+[node name="Stats" type="NinePatchRect" parent="."]
+offset_left = 1283.0
+offset_top = -0.999998
+offset_right = 1323.0
+offset_bottom = 39.0
+scale = Vector2(15.993, 9.57358)
+texture = SubResource("AtlasTexture_r30av")
+
+[node name="LengthBar" type="HBoxContainer" parent="Stats"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.3534
+offset_top = 6.30143
+offset_right = 128.647
+offset_bottom = 95.3014
+grow_horizontal = 2
+scale = Vector2(0.179272, 0.38655)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Stats/LengthBar"]
+layout_mode = 2
+value = 100.0
+texture_progress = ExtResource("6_mynug")
+
+[node name="DurabilityBar" type="HBoxContainer" parent="Stats"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -1.3534
+offset_top = 17.583
+offset_right = 128.647
+offset_bottom = 106.583
+grow_horizontal = 2
+scale = Vector2(0.179272, 0.38655)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Stats/DurabilityBar"]
+layout_mode = 2
+value = 100.0
+texture_progress = ExtResource("6_mynug")
+
+[node name="LengthLabel" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 3.10777
+offset_top = 9.45214
+offset_right = 131.108
+offset_bottom = 58.4521
+scale = Vector2(0.126879, 0.143333)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Length
+10/10"
+horizontal_alignment = 1
+
+[node name="DurabilityLabel" type="Label" parent="Stats"]
+layout_mode = 0
+offset_left = 3.10777
+offset_top = 22.055
+offset_right = 131.108
+offset_bottom = 71.055
+scale = Vector2(0.126879, 0.143333)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Durability
+10/10"
+horizontal_alignment = 1

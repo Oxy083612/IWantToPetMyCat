@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c2nii6p4tnov4"]
+
+[node name="ItemLength1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="end" type="Node2D" parent="."]
+
+[node name="start" type="Node2D" parent="."]

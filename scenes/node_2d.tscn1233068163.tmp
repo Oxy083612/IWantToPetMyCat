@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://b12ba18abxfwh"]
+
+[ext_resource type="Script" uid="uid://f7l5rmwmig5k" path="res://scripts/node_2d.gd" id="1_6e84v"]
+[ext_resource type="PackedScene" uid="uid://07f74yx2l1ja" path="res://scenes/ItemGeneration.tscn" id="2_rnjyy"]
+[ext_resource type="PackedScene" uid="uid://ppcuj5rbu036" path="res://scenes/ItemSpace.tscn" id="3_4vge2"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_6e84v")
+
+[node name="ItemGeneration" parent="." instance=ExtResource("2_rnjyy")]
+
+[node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("3_4vge2")]
+position = Vector2(525, 270)
+
+[node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("3_4vge2")]
+position = Vector2(653, 158)
+
+[node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("3_4vge2")]
+position = Vector2(315, 229)
