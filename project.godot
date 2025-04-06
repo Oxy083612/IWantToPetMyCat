@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="project-x"
+config/name="I want to pet my cat"
 run/main_scene="uid://bld3xdv1s1sma"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
