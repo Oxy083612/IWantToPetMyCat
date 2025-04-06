@@ -11,9 +11,6 @@ extends Node2D
 @onready var hand: Node2D = $Hand
 @onready var items: Node = $Items
 
-var needed_length = 10
-var needed_durability = 5
-
 var durability = 0
 var length = 0
 

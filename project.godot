@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 
 ItemsPool="*res://scenes/items_pool.tscn"
 Equipment="*res://scenes/equipment.tscn"
+Hand="*res://scenes/hand.tscn"
+GameLoop="*res://scenes/game_loop.tscn"
 
 [display]
 
