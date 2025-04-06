@@ -9,7 +9,7 @@ var rng = RandomNumberGenerator.new()
 	
 #dostaje id do itema który już nie istnieje/nie jest na scenie
 func set_item(new_item):
-	item_path = Equipment._return_texture_big_name(new_item)
+	item_path = Equipment._return_texture_name(new_item)
 	item_name = Equipment._return_name(new_item)
 	self.texture_normal = load(item_path)	
 	self.rotation = deg_to_rad(rng.randi_range(0, 360))

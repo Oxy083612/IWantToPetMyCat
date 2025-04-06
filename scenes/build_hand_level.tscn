@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
 [ext_resource type="Script" uid="uid://2yu6o2gsqxel" path="res://scripts/hand.gd" id="2_6lf41"]
 [ext_resource type="Texture2D" uid="uid://5x46wmlgjwx0" path="res://temp_assets/PastelUIFree.png" id="4_6lf41"]
-[ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="5_6lf41"]
+[ext_resource type="Script" path="res://scripts/tape_counter.gd" id="5_6lf41"]
 [ext_resource type="Texture2D" uid="uid://dwcqnpul2kfnh" path="res://icon.svg" id="5_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://bk3kqx0v85pof" path="res://temp_assets/bars/Pixel1_Healthbar_0003_pixel1_healthbarcomplete.png" id="6_mynug"]
 

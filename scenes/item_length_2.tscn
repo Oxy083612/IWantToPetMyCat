@@ -9,6 +9,6 @@ position = Vector2(34, 1)
 texture = ExtResource("1_e54k8")
 
 [node name="end" type="Node2D" parent="."]
-position = Vector2(68, 0)
+position = Vector2(64, 0)
 
 [node name="start" type="Node2D" parent="."]
