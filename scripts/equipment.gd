@@ -26,7 +26,7 @@ func _return_length(item: String):
 @export var tapes = 2
 
 func add_item(item):
-	if(item == "ductTape"):
+	if(ItemsPool.items[item]["type"] == ItemsPool.item_types.tape):
 		tapes += 1
 	else:
 		current_items.append(item)

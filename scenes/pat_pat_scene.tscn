@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=18 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="1_m415t"]
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat_scene.gd" id="1_qtqs3"]
@@ -14,6 +14,8 @@
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_b3ycj"]
 [ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vy30t"]
 [ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="14_38ukf"]
+[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="15_fdbq7"]
+[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="16_wcw5g"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -144,5 +146,7 @@ offset_top = 937.0
 offset_right = 1834.0
 offset_bottom = 1036.0
 texture_normal = ExtResource("14_38ukf")
+texture_pressed = ExtResource("15_fdbq7")
+texture_hover = ExtResource("16_wcw5g")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

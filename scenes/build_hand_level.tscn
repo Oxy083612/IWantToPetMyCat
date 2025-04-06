@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://pc0tu2if1i0f"]
+[gd_scene load_steps=12 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
 [ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="5_6lf41"]
@@ -7,7 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="7_mynug"]
 [ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="8_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="8_mrgcu"]
+[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="8_r30av"]
 [ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/stol.png" id="9_mrgcu"]
+[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="9_my3ow"]
 [ext_resource type="Script" uid="uid://bnjxk2h722gup" path="res://scripts/continue_button.gd" id="9_mynug"]
 
 [node name="BuildHandLevel" type="Node2D"]
@@ -29,7 +31,7 @@ offset_left = 2.63359
 offset_right = 18.6336
 offset_bottom = 23.0
 scale = Vector2(0.678065, 1.43574)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "5"
 
 [node name="TextureRect" type="TextureRect" parent="TapeCounter"]
@@ -59,7 +61,7 @@ offset_right = 38.8296
 offset_bottom = 55.8
 grow_horizontal = 0
 scale = Vector2(0.209242, 0.475948)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 text = "Durability"
 horizontal_alignment = 1
@@ -121,17 +123,19 @@ offset_bottom = 28.6
 grow_horizontal = 0
 grow_vertical = 2
 scale = Vector2(0.209242, 0.475948)
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 16
 text = "Length"
 horizontal_alignment = 1
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 offset_left = 1518.0
 offset_top = 939.0
 offset_right = 1826.0
 offset_bottom = 1046.0
-icon = ExtResource("8_lwwhj")
+texture_normal = ExtResource("8_lwwhj")
+texture_pressed = ExtResource("8_r30av")
+texture_hover = ExtResource("9_my3ow")
 script = ExtResource("9_mynug")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
