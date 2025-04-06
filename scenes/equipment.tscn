@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://ekk88lt5oecb"]
-
-[ext_resource type="Script" uid="uid://cmvj1for3in4y" path="res://scripts/equipment.gd" id="1_dusko"]
-
-[node name="Equipment" type="Node"]
-script = ExtResource("1_dusko")

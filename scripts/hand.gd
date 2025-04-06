@@ -6,9 +6,9 @@ var real_durability = 0
 var current_length = 0
 var current_items = []
 
-@onready var item_length_1: PackedScene = preload("res://scenes/item_length_1.tscn")
-@onready var item_length_2: PackedScene = preload("res://scenes/item_length_2.tscn")
-@onready var item_slot: PackedScene = preload("res://scenes/item_slot.tscn")
+@onready var item_length_1: PackedScene = preload("res://scenes/hand_building/item_length_1.tscn")
+@onready var item_length_2: PackedScene = preload("res://scenes/hand_building/item_length_2.tscn")
+@onready var item_slot: PackedScene = preload("res://scenes/hand_building/buildable_item.tscn")
 
 var lastPosition
 var targetPosition

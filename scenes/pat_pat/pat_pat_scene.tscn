@@ -1,54 +1,54 @@
 [gd_scene load_steps=18 format=3 uid="uid://b2lsqf32vstun"]
 
-[ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="1_m415t"]
-[ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat_scene.gd" id="1_qtqs3"]
-[ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="3_casq0"]
-[ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="4_vy30t"]
-[ext_resource type="Texture2D" uid="uid://bn3y23mflbni0" path="res://images/cat/Cat-3.png" id="5_38ukf"]
-[ext_resource type="Texture2D" uid="uid://cqu0iqfg72xlc" path="res://images/cat/Cat-4.png" id="6_s2lfo"]
-[ext_resource type="Texture2D" uid="uid://d2g78vcf6kptp" path="res://images/cat/Cat-5.png" id="7_fdbq7"]
-[ext_resource type="Texture2D" uid="uid://cjuxf0k2y3qbk" path="res://images/cat/Cat-6.png" id="8_wcw5g"]
-[ext_resource type="Texture2D" uid="uid://dhclqm2bel2kk" path="res://images/cat/Cat-7.png" id="9_tm2ul"]
-[ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_ab1e5"]
-[ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_qiqcv"]
-[ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_b3ycj"]
-[ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vy30t"]
-[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="14_38ukf"]
-[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="15_fdbq7"]
-[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="16_wcw5g"]
+[ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat_scene.gd" id="1_xkuku"]
+[ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="2_qgess"]
+[ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="3_si1rj"]
+[ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="4_w1pfp"]
+[ext_resource type="Texture2D" uid="uid://bn3y23mflbni0" path="res://images/cat/Cat-3.png" id="5_ifaww"]
+[ext_resource type="Texture2D" uid="uid://cqu0iqfg72xlc" path="res://images/cat/Cat-4.png" id="6_kwxd5"]
+[ext_resource type="Texture2D" uid="uid://d2g78vcf6kptp" path="res://images/cat/Cat-5.png" id="7_ix6t6"]
+[ext_resource type="Texture2D" uid="uid://cjuxf0k2y3qbk" path="res://images/cat/Cat-6.png" id="8_y042e"]
+[ext_resource type="Texture2D" uid="uid://dhclqm2bel2kk" path="res://images/cat/Cat-7.png" id="9_e2y3e"]
+[ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_etgun"]
+[ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
+[ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
+[ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vveds"]
+[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="14_bl3vo"]
+[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="15_0uriq"]
+[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="16_facnr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_casq0")
+"texture": ExtResource("3_si1rj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_vy30t")
+"texture": ExtResource("4_w1pfp")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_38ukf")
+"texture": ExtResource("5_ifaww")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_s2lfo")
+"texture": ExtResource("6_kwxd5")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_fdbq7")
+"texture": ExtResource("7_ix6t6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_wcw5g")
+"texture": ExtResource("8_y042e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_tm2ul")
+"texture": ExtResource("9_e2y3e")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_ab1e5")
+"texture": ExtResource("10_etgun")
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_qiqcv")
+"texture": ExtResource("11_wy7qu")
 }, {
 "duration": 1.0,
-"texture": ExtResource("12_b3ycj")
+"texture": ExtResource("12_k8tkf")
 }],
 "loop": true,
 "name": &"Cat doing cat stuff",
@@ -56,12 +56,12 @@ animations = [{
 }]
 
 [node name="PatPatScene" type="Node2D"]
-script = ExtResource("1_qtqs3")
+script = ExtResource("1_xkuku")
 
 [node name="Background" type="Sprite2D" parent="."]
 position = Vector2(961, 541)
 scale = Vector2(8.2, 8.2)
-texture = ExtResource("1_m415t")
+texture = ExtResource("2_qgess")
 
 [node name="Cat" type="AnimatedSprite2D" parent="."]
 position = Vector2(969, 541)
@@ -74,7 +74,7 @@ autoplay = "Cat doing cat stuff"
 visible = false
 position = Vector2(1354, 317)
 scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vy30t")
+texture = ExtResource("13_vveds")
 
 [node name="anger" type="Label" parent="Cat anger"]
 offset_left = -215.073
@@ -91,7 +91,7 @@ autowrap_mode = 2
 visible = false
 position = Vector2(1354, 317)
 scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vy30t")
+texture = ExtResource("13_vveds")
 
 [node name="happy" type="Label" parent="Cat happy"]
 offset_left = -194.711
@@ -108,7 +108,7 @@ autowrap_mode = 2
 visible = false
 position = Vector2(222, 227)
 scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vy30t")
+texture = ExtResource("13_vveds")
 flip_h = true
 
 [node name="long" type="Label" parent="Not long enough"]
@@ -126,7 +126,7 @@ autowrap_mode = 2
 visible = false
 position = Vector2(222, 227)
 scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vy30t")
+texture = ExtResource("13_vveds")
 flip_h = true
 
 [node name="aw" type="Label" parent="Awwww"]
@@ -145,8 +145,8 @@ offset_left = 1534.0
 offset_top = 937.0
 offset_right = 1834.0
 offset_bottom = 1036.0
-texture_normal = ExtResource("14_38ukf")
-texture_pressed = ExtResource("15_fdbq7")
-texture_hover = ExtResource("16_wcw5g")
+texture_normal = ExtResource("14_bl3vo")
+texture_pressed = ExtResource("15_0uriq")
+texture_hover = ExtResource("16_facnr")
 
 [connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

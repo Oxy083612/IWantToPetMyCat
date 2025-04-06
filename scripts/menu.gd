@@ -6,7 +6,8 @@ func _ready():
 	print(Music.stream.loop)
 
 func _on_play_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
+	#get_tree().change_scene_to_file("res://scenes/cutscene.tscn")
+	get_tree().change_scene_to_file("res://scenes/item_gathering/gathering_scene.tscn")
 
 
 func _on_exit_pressed() -> void:

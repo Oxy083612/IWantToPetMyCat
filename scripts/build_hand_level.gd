@@ -1,8 +1,8 @@
 extends Node2D
 
-@onready var item_length_1: PackedScene = preload("res://scenes/item_length_1.tscn")
-@onready var item_length_2: PackedScene = preload("res://scenes/item_length_2.tscn")
-@onready var item_slot: PackedScene = preload("res://scenes/item_slot.tscn")
+@onready var item_length_1: PackedScene = preload("res://scenes/hand_building/item_length_1.tscn")
+@onready var item_length_2: PackedScene = preload("res://scenes/hand_building/item_length_2.tscn")
+@onready var item_slot: PackedScene = preload("res://scenes/hand_building/buildable_item.tscn")
 @onready var label: Label = $TapeCounter/Label
 @onready var length_label: Label = $Length/LengthLabel
 @onready var durability_label: Label = $Durability/DurabilityLabel
@@ -82,4 +82,4 @@ func _input(event):
 
 
 func _on_button_pressed() -> void:
-	get_tree().change_scene_to_file("res://scenes/pat_pat_scene.tscn")	
+	get_tree().change_scene_to_file("res://scenes/pat_pat/pat_pat_scene.tscn")	

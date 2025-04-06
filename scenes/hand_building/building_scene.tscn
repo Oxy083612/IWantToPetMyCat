@@ -1,19 +1,22 @@
 [gd_scene load_steps=12 format=3 uid="uid://pc0tu2if1i0f"]
 
-[ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
-[ext_resource type="Script" path="res://scripts/tape_counter.gd" id="5_6lf41"]
-[ext_resource type="Texture2D" uid="uid://ddvc7m7c441qh" path="res://images/items/small/Item-2.png" id="5_lwwhj"]
-[ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="6_lwwhj"]
-[ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="7_mynug"]
-[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="8_lwwhj"]
-[ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="8_mrgcu"]
-[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="8_r30av"]
-[ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/stol.png" id="9_mrgcu"]
-[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="9_my3ow"]
-[ext_resource type="Script" uid="uid://bnjxk2h722gup" path="res://scripts/continue_button.gd" id="9_mynug"]
+[ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_k4vdf"]
+[ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="2_vmvnh"]
+[ext_resource type="Texture2D" uid="uid://ddvc7m7c441qh" path="res://images/items/small/Item-2.png" id="3_01wot"]
+[ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="4_rpvnu"]
+[ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="5_m46la"]
+[ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="6_y8toh"]
+[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="7_2kv8c"]
+[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="8_q8bcx"]
+[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="9_fp4ul"]
+[ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/stol.png" id="10_yij7t"]
+
+[sub_resource type="GDScript" id="GDScript_mrgcu"]
+script/source = "extends TextureButton
+"
 
 [node name="BuildHandLevel" type="Node2D"]
-script = ExtResource("1_3efjt")
+script = ExtResource("1_k4vdf")
 
 [node name="Items" type="Node" parent="."]
 
@@ -23,7 +26,7 @@ offset_top = 35.0
 offset_right = 85.0
 offset_bottom = 75.0
 scale = Vector2(6.15, 2.5)
-script = ExtResource("5_6lf41")
+script = ExtResource("2_vmvnh")
 
 [node name="Label" type="Label" parent="TapeCounter"]
 layout_mode = 0
@@ -41,7 +44,7 @@ offset_top = -8.4
 offset_right = 127.024
 offset_bottom = 119.6
 scale = Vector2(0.365619, 0.425572)
-texture = ExtResource("5_lwwhj")
+texture = ExtResource("3_01wot")
 
 [node name="Durability" type="NinePatchRect" parent="."]
 offset_left = 1600.0
@@ -81,8 +84,8 @@ scale = Vector2(0.145831, 0.362391)
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Durability/DurabilityBar"]
 layout_mode = 2
 value = 100.0
-texture_under = ExtResource("6_lwwhj")
-texture_progress = ExtResource("7_mynug")
+texture_under = ExtResource("4_rpvnu")
+texture_progress = ExtResource("5_m46la")
 
 [node name="Length" type="NinePatchRect" parent="."]
 offset_left = 1034.0
@@ -106,8 +109,8 @@ scale = Vector2(0.147827, 0.38655)
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Length/LengthBar"]
 layout_mode = 2
 value = 100.0
-texture_under = ExtResource("6_lwwhj")
-texture_progress = ExtResource("8_mrgcu")
+texture_under = ExtResource("4_rpvnu")
+texture_progress = ExtResource("6_y8toh")
 
 [node name="LengthLabel" type="Label" parent="Length"]
 layout_mode = 1
@@ -133,15 +136,15 @@ offset_left = 1518.0
 offset_top = 939.0
 offset_right = 1826.0
 offset_bottom = 1046.0
-texture_normal = ExtResource("8_lwwhj")
-texture_pressed = ExtResource("8_r30av")
-texture_hover = ExtResource("9_my3ow")
-script = ExtResource("9_mynug")
+texture_normal = ExtResource("7_2kv8c")
+texture_pressed = ExtResource("8_q8bcx")
+texture_hover = ExtResource("9_fp4ul")
+script = SubResource("GDScript_mrgcu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -5
 position = Vector2(960, 540)
 scale = Vector2(8.20513, 8.18182)
-texture = ExtResource("9_mrgcu")
+texture = ExtResource("10_yij7t")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

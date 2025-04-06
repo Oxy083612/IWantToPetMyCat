@@ -1,28 +1,28 @@
 [gd_scene load_steps=67 format=3 uid="uid://b6n7ve6wxkyir"]
 
-[ext_resource type="Script" path="res://scripts/search_items_level.gd" id="1_df62o"]
-[ext_resource type="PackedScene" uid="uid://dh5nyxp606mlk" path="res://scenes/hud_search_items.tscn" id="2_7pitd"]
-[ext_resource type="PackedScene" uid="uid://245n4b30il23" path="res://scenes/player.tscn" id="3_femh3"]
-[ext_resource type="PackedScene" uid="uid://07f74yx2l1ja" path="res://scenes/ItemGeneration.tscn" id="5_femh3"]
-[ext_resource type="PackedScene" uid="uid://ppcuj5rbu036" path="res://scenes/ItemSpace.tscn" id="6_7pitd"]
-[ext_resource type="Texture2D" uid="uid://dtvh4ahv1foj0" path="res://images/map.png" id="7_7pitd"]
-[ext_resource type="PackedScene" uid="uid://8od55wc1dycj" path="res://scenes/Table.tscn" id="7_254j5"]
-[ext_resource type="Texture2D" uid="uid://1m3elj8cf4ci" path="res://images/szafka.png" id="7_ysykw"]
-[ext_resource type="Texture2D" uid="uid://dtkli1or2un06" path="res://images/wieszak.png" id="8_wux0l"]
-[ext_resource type="Texture2D" uid="uid://bxmcduvxyumjn" path="res://images/items/blat.png" id="9_7elm5"]
-[ext_resource type="Texture2D" uid="uid://dnff4sq2l8e48" path="res://images/items/donic.png" id="10_yb585"]
-[ext_resource type="Texture2D" uid="uid://mslt6dej7ilv" path="res://images/items/fotel.png" id="11_7km52"]
-[ext_resource type="Texture2D" uid="uid://dpboti52v4xdg" path="res://images/items/komoda.png" id="12_msdbh"]
-[ext_resource type="Texture2D" uid="uid://cgxh7hnejneme" path="res://images/items/krzeselko.png" id="13_del6f"]
-[ext_resource type="Texture2D" uid="uid://ddwqt4fhm2dau" path="res://images/items/ksiazki.png" id="14_gj763"]
-[ext_resource type="Texture2D" uid="uid://f7iy4m1gnvd3" path="res://images/items/lampa2.png" id="15_gam5x"]
-[ext_resource type="Texture2D" uid="uid://b7e6vbgxwyyn1" path="res://images/items/stol22.png" id="16_dktxx"]
-[ext_resource type="Texture2D" uid="uid://ba24cbduc2lia" path="res://images/items/stol.png" id="17_jbdij"]
-[ext_resource type="Texture2D" uid="uid://dgn25pyablbvd" path="res://images/items/szafki.png" id="18_0ppmw"]
-[ext_resource type="Texture2D" uid="uid://cdkyf71jl5hdt" path="res://images/items/taboret.png" id="19_pgplo"]
-[ext_resource type="Texture2D" uid="uid://bytib8donkr0h" path="res://images/items/kot.png" id="20_ntbmh"]
-[ext_resource type="Texture2D" uid="uid://ch8gelsbuncsl" path="res://images/items/tv.png" id="21_6gc2l"]
-[ext_resource type="Texture2D" uid="uid://cyfrtubtgd5oa" path="res://images/items/stol44.png" id="22_11hoe"]
+[ext_resource type="Script" uid="uid://c1nvork2gn2r1" path="res://scripts/search_items_level.gd" id="1_lwume"]
+[ext_resource type="PackedScene" uid="uid://dh5nyxp606mlk" path="res://scenes/item_gathering/gathering_hud.tscn" id="2_0fwp8"]
+[ext_resource type="PackedScene" uid="uid://245n4b30il23" path="res://scenes/item_gathering/girl.tscn" id="3_4uyn0"]
+[ext_resource type="PackedScene" uid="uid://07f74yx2l1ja" path="res://scenes/item_gathering/item_generator.tscn" id="4_4gcjf"]
+[ext_resource type="PackedScene" uid="uid://ppcuj5rbu036" path="res://scenes/item_gathering/item_space.tscn" id="5_mdklp"]
+[ext_resource type="Texture2D" uid="uid://dtvh4ahv1foj0" path="res://images/map.png" id="6_fk526"]
+[ext_resource type="Texture2D" uid="uid://1m3elj8cf4ci" path="res://images/szafka.png" id="7_vf8jj"]
+[ext_resource type="Texture2D" uid="uid://dtkli1or2un06" path="res://images/wieszak.png" id="8_q5kya"]
+[ext_resource type="Texture2D" uid="uid://bxmcduvxyumjn" path="res://images/items/blat.png" id="9_xhq18"]
+[ext_resource type="Texture2D" uid="uid://dnff4sq2l8e48" path="res://images/items/donic.png" id="10_lsdhn"]
+[ext_resource type="Texture2D" uid="uid://mslt6dej7ilv" path="res://images/items/fotel.png" id="11_e8qap"]
+[ext_resource type="Texture2D" uid="uid://dpboti52v4xdg" path="res://images/items/komoda.png" id="12_0mxfq"]
+[ext_resource type="Texture2D" uid="uid://cgxh7hnejneme" path="res://images/items/krzeselko.png" id="13_b6ans"]
+[ext_resource type="Texture2D" uid="uid://ddwqt4fhm2dau" path="res://images/items/ksiazki.png" id="14_7o1cn"]
+[ext_resource type="Texture2D" uid="uid://f7iy4m1gnvd3" path="res://images/items/lampa2.png" id="15_bm20j"]
+[ext_resource type="Texture2D" uid="uid://b7e6vbgxwyyn1" path="res://images/items/stol22.png" id="16_madm0"]
+[ext_resource type="Texture2D" uid="uid://ba24cbduc2lia" path="res://images/items/stol.png" id="17_3xyos"]
+[ext_resource type="Texture2D" uid="uid://dgn25pyablbvd" path="res://images/items/szafki.png" id="18_oxw4x"]
+[ext_resource type="Texture2D" uid="uid://cdkyf71jl5hdt" path="res://images/items/taboret.png" id="19_reukj"]
+[ext_resource type="Texture2D" uid="uid://bytib8donkr0h" path="res://images/items/kot.png" id="20_aw3f3"]
+[ext_resource type="Texture2D" uid="uid://ch8gelsbuncsl" path="res://images/items/tv.png" id="21_xxrky"]
+[ext_resource type="Texture2D" uid="uid://cyfrtubtgd5oa" path="res://images/items/stol44.png" id="22_hfgiu"]
+[ext_resource type="PackedScene" uid="uid://8od55wc1dycj" path="res://scenes/item_gathering/table.tscn" id="23_xtwq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du432"]
 size = Vector2(72, 33)
@@ -153,11 +153,11 @@ size = Vector2(71, 15)
 size = Vector2(28, 20)
 
 [node name="SearchItemsLevel" type="Node2D"]
-script = ExtResource("1_df62o")
+script = ExtResource("1_lwume")
 
-[node name="HUDSearchItems" parent="." instance=ExtResource("2_7pitd")]
+[node name="HUDSearchItems" parent="." instance=ExtResource("2_0fwp8")]
 
-[node name="Player" parent="." instance=ExtResource("3_femh3")]
+[node name="Player" parent="." instance=ExtResource("3_4uyn0")]
 position = Vector2(0, -17)
 collision_mask = 3
 
@@ -166,90 +166,90 @@ zoom = Vector2(5, 5)
 process_callback = 0
 position_smoothing_enabled = true
 
-[node name="ItemGeneration" parent="." instance=ExtResource("5_femh3")]
+[node name="ItemGeneration" parent="." instance=ExtResource("4_4gcjf")]
 
-[node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-94, -34)
 
-[node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-16, -76)
 
-[node name="ItemSpace5" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace5" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(71, -76)
 
-[node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-64, 65)
 
-[node name="ItemSpace4" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace4" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(77, 49)
 
-[node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(216, 297)
 
-[node name="ItemSpace18" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace18" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(497, 346)
 
-[node name="ItemSpace19" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace19" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(492, 253)
 
-[node name="ItemSpace20" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace20" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(456, 208)
 
-[node name="ItemSpace21" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace21" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(387, 220)
 
-[node name="ItemSpace22" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace22" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(383, 93)
 
-[node name="ItemSpace23" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace23" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(264, 96)
 
-[node name="ItemSpace24" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace24" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(323, 94)
 
-[node name="ItemSpace25" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace25" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(229, 148)
 
-[node name="ItemSpace26" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace26" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(208, 70)
 
-[node name="ItemSpace27" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace27" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(228, 34)
 
-[node name="ItemSpace28" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace28" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(261, 26)
 
-[node name="ItemSpace6" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace6" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(106, 14)
 
-[node name="ItemSpace7" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace7" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(25, 9)
 
-[node name="ItemSpace8" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace8" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(3, 161)
 
-[node name="ItemSpace9" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace9" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-42, 243)
 
-[node name="ItemSpace10" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace10" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-164, 251)
 
-[node name="ItemSpace11" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace11" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-144, 220)
 
-[node name="ItemSpace12" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace12" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(61, 260)
 
-[node name="ItemSpace13" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace13" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(83, 189)
 
-[node name="ItemSpace14" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace14" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(147, 204)
 
-[node name="ItemSpace15" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace15" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(219, 189)
 
-[node name="ItemSpace16" parent="ItemGeneration" instance=ExtResource("6_7pitd")]
+[node name="ItemSpace16" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(265, 326)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -257,7 +257,7 @@ position = Vector2(265, 326)
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(213, 100)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("7_7pitd")
+texture = ExtResource("6_fk526")
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(393, 178.5)
@@ -445,104 +445,104 @@ shape = SubResource("RectangleShape2D_bekr3")
 z_index = 100
 position = Vector2(214, 101)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("7_ysykw")
+texture = ExtResource("7_vf8jj")
 
 [node name="Sprite2D3" type="Sprite2D" parent="StaticBody2D"]
 z_index = 100
 position = Vector2(212, 100)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("8_wux0l")
+texture = ExtResource("8_q5kya")
 
 [node name="Sprite2D4" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(206, 99)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("9_7elm5")
+texture = ExtResource("9_xhq18")
 
 [node name="Sprite2D5" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(208, 97)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("10_yb585")
+texture = ExtResource("10_lsdhn")
 
 [node name="Sprite2D6" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(214, 88)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("11_7km52")
+texture = ExtResource("11_e8qap")
 
 [node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(211, 102)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("12_msdbh")
+texture = ExtResource("12_0mxfq")
 
 [node name="Sprite2D8" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(209, 95)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("13_del6f")
+texture = ExtResource("13_b6ans")
 
 [node name="Sprite2D17" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(439, 397)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("13_del6f")
+texture = ExtResource("13_b6ans")
 
 [node name="Sprite2D9" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(206, 88)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("14_gj763")
+texture = ExtResource("14_7o1cn")
 
 [node name="Sprite2D10" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(203, 95)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("15_gam5x")
+texture = ExtResource("15_bm20j")
 
 [node name="Sprite2D11" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(204, 96)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("16_dktxx")
+texture = ExtResource("16_madm0")
 
 [node name="Sprite2D12" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(204, 100)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("17_jbdij")
+texture = ExtResource("17_3xyos")
 
 [node name="Sprite2D13" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(208, 99)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("18_0ppmw")
+texture = ExtResource("18_oxw4x")
 
 [node name="Sprite2D15" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(201, 30)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_pgplo")
+texture = ExtResource("19_reukj")
 
 [node name="Sprite2D16" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(201, 61)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_pgplo")
+texture = ExtResource("19_reukj")
 
 [node name="Sprite2D18" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(516, 95)
 scale = Vector2(-1.7, 1.7)
-texture = ExtResource("19_pgplo")
+texture = ExtResource("19_reukj")
 
 [node name="Sprite2D14" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(201, 98)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_pgplo")
+texture = ExtResource("19_reukj")
 
 [node name="Sprite2D19" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(209, 99)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("20_ntbmh")
+texture = ExtResource("20_aw3f3")
 
 [node name="Sprite2D20" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(201, 95)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("21_6gc2l")
+texture = ExtResource("21_xxrky")
 
 [node name="Sprite2D21" type="Sprite2D" parent="StaticBody2D"]
 position = Vector2(207, 98)
 scale = Vector2(1.7, 1.7)
-texture = ExtResource("22_11hoe")
+texture = ExtResource("22_hfgiu")
 
-[node name="Table" parent="." instance=ExtResource("7_254j5")]
+[node name="Table" parent="." instance=ExtResource("23_xtwq8")]
 light_mask = 1
 position = Vector2(361, 313)

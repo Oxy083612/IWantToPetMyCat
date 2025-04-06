@@ -7,7 +7,7 @@ signal change_item(item)
 	#{"name": "InsulatingTape", "texture": "res://images/items/InsulatingTape.png", "type": item_types.tape, "durability": 2},
 
 	
-@onready var item: PackedScene = preload("res://scenes/item.tscn")
+@onready var item: PackedScene = preload("res://scenes/item_gathering/pickup_item.tscn")
 @onready var item_list = []
 @onready var item_space_list = get_children()
 @onready var item_space_list_tmp
