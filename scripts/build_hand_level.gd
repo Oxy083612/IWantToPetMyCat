@@ -8,11 +8,10 @@ extends Node2D
 @onready var durability_label: Label = $Durability/DurabilityLabel
 @onready var length_bar: TextureProgressBar = $Length/LengthBar/TextureProgressBar
 @onready var durability_bar: TextureProgressBar = $Durability/DurabilityBar/TextureProgressBar
-@onready var hand: Node2D = $Hand
 @onready var items: Node = $Items
 
-@onready var lastPosition = $Hand.global_position
-@onready var targetPosition = $Hand.global_position
+@onready var lastPosition = Hand.global_position
+@onready var targetPosition = Hand.global_position
 
 var needed_length = 10
 var needed_durability = 5
@@ -37,7 +36,7 @@ func _physics_process(delta: float) -> void:
 func _on_item_slot_pressed(item_name):
 	if(Equipment._return_length(item_name) == 1 && length < needed_length):
 		var item_big = item_length_1.instantiate()
-		hand.add_child(item_big)
+		Hand.add_child(item_big)
 		item_big.get_node("Sprite2D").texture = load(Equipment._return_texture_big_name(item_name))
 		item_big.position = targetPosition
 		var sprite_tape = Sprite2D.new()
@@ -45,14 +44,14 @@ func _on_item_slot_pressed(item_name):
 		sprite_tape.rotation_degrees = randi_range(70, 110)
 		sprite_tape.texture = load("res://images/items/big/short_tape.png")
 		item_big.add_child(sprite_tape)
-		if targetPosition == $Hand.global_position:
+		if targetPosition == Hand.global_position:
 			sprite_tape.position = targetPosition
 		targetPosition = item_big.get_node("end").global_position
 		lastPosition = item_big.get_node("start").global_position
 		length += 1
 	else:
 		var item_big = item_length_2.instantiate()
-		hand.add_child(item_big)
+		Hand.add_child(item_big)
 		item_big.get_node("Sprite2D").texture = load(Equipment._return_texture_big_name(item_name))
 		item_big.global_position = targetPosition
 		var sprite_tape = Sprite2D.new()
@@ -60,7 +59,7 @@ func _on_item_slot_pressed(item_name):
 		sprite_tape.rotation_degrees = randi_range(70, 110)
 		sprite_tape.texture = load("res://images/items/big/short_tape.png")
 		item_big.add_child(sprite_tape)
-		if targetPosition == $Hand.global_position:
+		if targetPosition == Hand.global_position:
 			sprite_tape.position = targetPosition
 		targetPosition = item_big.get_node("end").global_position
 		lastPosition = item_big.get_node("start").global_position
@@ -73,4 +72,6 @@ func _input(event):
 		get_tree().quit()  
 		
 
-	
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/pat_pat_scene.tscn")	
