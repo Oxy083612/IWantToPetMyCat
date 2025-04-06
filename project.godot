@@ -21,6 +21,7 @@ ItemsPool="*res://scenes/items_pool.tscn"
 Equipment="*res://scenes/equipment.tscn"
 Hand="*res://scenes/hand.tscn"
 GameLoop="*res://scenes/game_loop.tscn"
+Music="*res://scenes/music.tscn"
 
 [display]
 

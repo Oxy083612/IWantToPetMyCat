@@ -25,7 +25,7 @@ func _ready():
 		var i = 0
 		var new_item = item_slot.instantiate()
 		new_item.set_item(item)
-		new_item.position = Vector2(randi_range(100, 1820), randi_range(540, 800))
+		new_item.position = Vector2(randi_range(200, 1720), randi_range(600, 800))
 		items.add_child(new_item)
 		new_item.item_slot_pressed.connect(_on_item_slot_pressed)
 

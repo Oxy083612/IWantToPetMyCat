@@ -13,8 +13,8 @@ func set_item(new_item):
 	item_name = Equipment._return_name(new_item)
 	self.texture_normal = load(item_path)	
 	self.rotation = deg_to_rad(rng.randi_range(0, 360))
-	self.scale.x = 3
-	self.scale.y = 3
+	self.scale.x = 10
+	self.scale.y = 10
 	var bitmap = BitMap.new()
 	bitmap.create_from_image_alpha(self.texture_normal.get_image())
 	texture_click_mask = bitmap

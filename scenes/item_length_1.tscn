@@ -5,10 +5,13 @@
 [node name="ItemLength1" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(18, 1)
+position = Vector2(54, 3)
+scale = Vector2(3, 3)
 texture = ExtResource("1_iixys")
 
 [node name="end" type="Node2D" parent="."]
-position = Vector2(33, 0)
+position = Vector2(104, 0)
+scale = Vector2(3, 3)
 
 [node name="start" type="Node2D" parent="."]
+scale = Vector2(3, 3)

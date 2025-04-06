@@ -1,15 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://pc0tu2if1i0f"]
+[gd_scene load_steps=10 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
-[ext_resource type="Script" uid="uid://2yu6o2gsqxel" path="res://scripts/hand.gd" id="2_6lf41"]
 [ext_resource type="Script" path="res://scripts/tape_counter.gd" id="5_6lf41"]
-[ext_resource type="Texture2D" uid="uid://dwcqnpul2kfnh" path="res://icon.svg" id="5_lwwhj"]
-[ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="5_6lf41"]
 [ext_resource type="Texture2D" uid="uid://ddvc7m7c441qh" path="res://images/items/small/Item-2.png" id="5_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="6_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="7_mynug"]
 [ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="8_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="8_mrgcu"]
+[ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/stol.png" id="9_mrgcu"]
 [ext_resource type="Script" uid="uid://bnjxk2h722gup" path="res://scripts/continue_button.gd" id="9_mynug"]
 
 [node name="BuildHandLevel" type="Node2D"]
@@ -137,5 +135,11 @@ offset_right = 1826.0
 offset_bottom = 1046.0
 icon = ExtResource("8_lwwhj")
 script = ExtResource("9_mynug")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -5
+position = Vector2(960, 540)
+scale = Vector2(8.20513, 8.18182)
+texture = ExtResource("9_mrgcu")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
