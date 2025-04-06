@@ -4,8 +4,7 @@ enum item_types{
 	stick, tape, end	
 }
 
-var current_items = [
-]
+var current_items = ["baguette",]
 
 func _return_texture_big_name(item: String):
 	return ItemsPool.items[item].get("texture_big")
@@ -24,11 +23,11 @@ func _return_length(item: String):
 	return ItemsPool.items[item].get("length")
 	
 
-@export var tapes = 0
+@export var tapes = 2
 
 func add_item(item):
 	if(item == "ductTape"):
-			tapes += 1
+		tapes += 1
 	else:
 		current_items.append(item)
 		return true
