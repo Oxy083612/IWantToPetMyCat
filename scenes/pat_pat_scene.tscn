@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=16 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="1_m415t"]
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat_scene.gd" id="1_qtqs3"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_qiqcv"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_b3ycj"]
 [ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vy30t"]
+[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="14_38ukf"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -68,11 +69,12 @@ animation = &"Cat doing cat stuff"
 autoplay = "Cat doing cat stuff"
 
 [node name="Cat anger" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1354, 317)
 scale = Vector2(0.785781, 0.656863)
 texture = ExtResource("13_vy30t")
 
-[node name="Angery" type="Label" parent="Cat anger"]
+[node name="anger" type="Label" parent="Cat anger"]
 offset_left = -215.073
 offset_top = -121.791
 offset_right = 185.927
@@ -84,11 +86,12 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Cat happy" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(1354, 317)
 scale = Vector2(0.785781, 0.656863)
 texture = ExtResource("13_vy30t")
 
-[node name="label" type="Label" parent="Cat happy"]
+[node name="happy" type="Label" parent="Cat happy"]
 offset_left = -194.711
 offset_top = -97.4328
 offset_right = 206.289
@@ -106,7 +109,7 @@ scale = Vector2(0.785781, 0.656863)
 texture = ExtResource("13_vy30t")
 flip_h = true
 
-[node name="Angery" type="Label" parent="Not long enough"]
+[node name="long" type="Label" parent="Not long enough"]
 offset_left = -188.348
 offset_top = -121.791
 offset_right = 212.652
@@ -124,7 +127,7 @@ scale = Vector2(0.785781, 0.656863)
 texture = ExtResource("13_vy30t")
 flip_h = true
 
-[node name="label" type="Label" parent="Awwww"]
+[node name="aw" type="Label" parent="Awwww"]
 offset_left = -190.893
 offset_top = -108.09
 offset_right = 210.107
@@ -134,3 +137,12 @@ theme_override_font_sizes/font_size = 40
 text = "Awwwww..."
 horizontal_alignment = 1
 autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="."]
+offset_left = 1534.0
+offset_top = 937.0
+offset_right = 1834.0
+offset_bottom = 1036.0
+texture_normal = ExtResource("14_38ukf")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

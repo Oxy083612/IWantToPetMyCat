@@ -26,9 +26,7 @@ func _on_pressed() -> void:
 		if Equipment.tapes == 0:
 			return
 		self.set_modulate(Color(0.5, 0.5, 0.5))
-		Equipment.tapes -= 1
 		is_used = true
 	else:
 		self.set_modulate(Color(1, 1, 1))
-		Equipment.tapes += 1
 		is_used = false

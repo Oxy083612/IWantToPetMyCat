@@ -1,9 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/build_hand_level.gd" id="1_3efjt"]
-[ext_resource type="Script" uid="uid://2yu6o2gsqxel" path="res://scripts/hand.gd" id="2_6lf41"]
-[ext_resource type="Script" path="res://scripts/tape_counter.gd" id="5_6lf41"]
-[ext_resource type="Texture2D" uid="uid://dwcqnpul2kfnh" path="res://icon.svg" id="5_lwwhj"]
 [ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/tape_counter.gd" id="5_6lf41"]
 [ext_resource type="Texture2D" uid="uid://ddvc7m7c441qh" path="res://images/items/small/Item-2.png" id="5_lwwhj"]
 [ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="6_lwwhj"]
@@ -63,8 +60,7 @@ grow_horizontal = 0
 scale = Vector2(0.209242, 0.475948)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Durability
-10/10"
+text = "Durability"
 horizontal_alignment = 1
 
 [node name="DurabilityBar" type="HBoxContainer" parent="Durability"]
@@ -126,8 +122,7 @@ grow_vertical = 2
 scale = Vector2(0.209242, 0.475948)
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 16
-text = "Length
-10/10"
+text = "Length"
 horizontal_alignment = 1
 
 [node name="Button" type="Button" parent="."]
