@@ -1,6 +1,6 @@
 [gd_scene load_steps=67 format=3 uid="uid://b6n7ve6wxkyir"]
 
-[ext_resource type="Script" uid="uid://c1nvork2gn2r1" path="res://scripts/search_items_level.gd" id="1_lwume"]
+[ext_resource type="Script" uid="uid://c1nvork2gn2r1" path="res://scripts/item_gathering/item_gathering_level.gd" id="1_lwume"]
 [ext_resource type="PackedScene" uid="uid://dh5nyxp606mlk" path="res://scenes/item_gathering/gathering_hud.tscn" id="2_0fwp8"]
 [ext_resource type="PackedScene" uid="uid://245n4b30il23" path="res://scenes/item_gathering/girl.tscn" id="3_4uyn0"]
 [ext_resource type="PackedScene" uid="uid://07f74yx2l1ja" path="res://scenes/item_gathering/item_generator.tscn" id="4_4gcjf"]

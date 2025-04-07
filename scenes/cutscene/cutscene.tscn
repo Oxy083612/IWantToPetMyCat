@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2hdx7qoqnpu4"]
 
-[ext_resource type="Script" uid="uid://bxwssruam3o40" path="res://scripts/cutscene.gd" id="1_vayev"]
+[ext_resource type="Script" uid="uid://bxwssruam3o40" path="res://scripts/cutscene/cutscene.gd" id="1_vayev"]
 
 [sub_resource type="VideoStreamTheora" id="VideoStreamTheora_edmg7"]
 

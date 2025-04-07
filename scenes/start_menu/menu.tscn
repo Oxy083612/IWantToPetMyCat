@@ -1,6 +1,6 @@
 [gd_scene load_steps=21 format=3 uid="uid://bld3xdv1s1sma"]
 
-[ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu.gd" id="1_brl5r"]
+[ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu/menu.gd" id="1_brl5r"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="2_mku4g"]
 [ext_resource type="Texture2D" uid="uid://s68ih8jw2xd7" path="res://images/items/napis_Obszar_roboczy_1.png" id="3_my8n6"]
 [ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="4_vf1ql"]
