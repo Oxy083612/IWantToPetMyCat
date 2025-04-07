@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://ppcuj5rbu036"]
 
-[ext_resource type="Script" uid="uid://duc3myb85m1da" path="res://scripts/item_gathering/item_space_script.gd" id="2_feapb"]
+[ext_resource type="Script" uid="uid://duc3myb85m1da" path="res://scripts/item_gathering/item_space.gd" id="2_feapb"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_loiqe"]
 radius = 48.0

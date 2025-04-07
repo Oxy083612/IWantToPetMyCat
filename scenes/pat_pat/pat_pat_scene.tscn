@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=17 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat/pat_pat_scene.gd" id="1_xkuku"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="2_qgess"]
@@ -13,9 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
 [ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vveds"]
-[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="14_bl3vo"]
-[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="15_0uriq"]
-[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="16_facnr"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -54,6 +51,15 @@ animations = [{
 "name": &"Cat doing cat stuff",
 "speed": 5.0
 }]
+
+[sub_resource type="Animation" id="Animation_b2pyc"]
+resource_name = "finish"
+length = 10.0
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hcqg7"]
+_data = {
+&"finish": SubResource("Animation_b2pyc")
+}
 
 [node name="PatPatScene" type="Node2D"]
 z_index = -1
@@ -141,13 +147,7 @@ text = "Awwwww..."
 horizontal_alignment = 1
 autowrap_mode = 2
 
-[node name="TextureButton" type="TextureButton" parent="."]
-offset_left = 1534.0
-offset_top = 937.0
-offset_right = 1834.0
-offset_bottom = 1036.0
-texture_normal = ExtResource("14_bl3vo")
-texture_pressed = ExtResource("15_0uriq")
-texture_hover = ExtResource("16_facnr")
-
-[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_hcqg7")
+}

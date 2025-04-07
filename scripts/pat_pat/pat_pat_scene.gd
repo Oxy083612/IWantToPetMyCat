@@ -25,6 +25,3 @@ func finish():
 	else:
 		awwww.visible = true
 		cat_happy.visible = true
-	
-func _on_texture_button_pressed() -> void:
-	finish()

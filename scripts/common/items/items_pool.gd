@@ -26,12 +26,12 @@ enum item_types { stick, tape, end }
 		 "texture": "res://images/items/small/Item-5.png",
 		 "type": item_types.tape,
 		},
-	"ductTape" : {
-		"name": "ductTape", "texture": "res://images/items/small/Item-2.png",
+	"duct tape" : {
+		"name": "duct tape", "texture": "res://images/items/small/Item-2.png",
 		 "type": item_types.tape
 		},
-	"isolationTape": {
-		"name": "isolationTape",
+	"isolation tape": {
+		"name": "isolation tape",
 		 "texture": "res://images/items/small/Item-6.png",
 		 "type": item_types.tape
 		},
@@ -89,8 +89,8 @@ enum item_types { stick, tape, end }
 		 "length": 2,
 		 "durability": 1
 	},
-	"brush": {
-		"name": "brush",
+	"toilet brush": {
+		"name": "toilet brush",
 		 "texture": "res://images/items/small/Item-9.png",
 		 "texture_big": "res://images/items/big/Szczotka.png",
 		 "texture_build": "res://images",
@@ -99,3 +99,6 @@ enum item_types { stick, tape, end }
 		 "durability": 2
 	},
 }
+
+func get_tapes():
+	return ["duct tape", "glue", "isolation tape"]

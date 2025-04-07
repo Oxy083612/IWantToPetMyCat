@@ -1,6 +1,7 @@
 extends CharacterBody2D
 signal destroy_item(id)
-signal add_item(id)
+signal show_item(id)
+signal hide_item(id)
 
 const SPEED = 150.0
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
@@ -12,8 +13,9 @@ const SPEED = 150.0
 enum DIRECTION {front, right, back, left}
 var dir = DIRECTION.front
 @export var item_held = null
+var can_get_items = false
 
-func _physics_process(delta: float) -> void:	
+func _physics_process(_delta: float) -> void:	
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	if(input_direction[0] > 0 and velocity != Vector2.ZERO):
 		sprite.play("walk_right")
@@ -42,6 +44,9 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body) -> void:
+	emit_signal("show_item", body.get_instance_id())
+	if not can_get_items:
+		return
 	if item_held == null and body != table:
 		item_held = body.item_name
 		label_desc.text = "Return the item to the table"
@@ -50,15 +55,12 @@ func _on_area_2d_body_entered(body) -> void:
 		Equipment.add_item(item_held)
 		label_desc.text = ""
 		item_held = null
-
-
-func _on_area_2d_body_exited(body: Node2D) -> void:
-	pass # Replace with function body.
+		
+func _on_area_2d_body_exited(body) -> void:
+	emit_signal("hide_item", body.get_instance_id())
 
 func _input(event):
 	if event.is_action_pressed("pick_up"):
-		area_2d.monitorable = true
-	elif item_held != null:
-		area_2d.monitorable = true
-	else:
-		area_2d.monitorable = false
+		can_get_items = true
+	elif event.is_action_released("pick_up"):
+		can_get_items = false

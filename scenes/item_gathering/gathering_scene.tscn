@@ -153,6 +153,7 @@ size = Vector2(71, 15)
 size = Vector2(28, 20)
 
 [node name="SearchItemsLevel" type="Node2D"]
+position = Vector2(0, -2)
 script = ExtResource("1_lwume")
 
 [node name="HUDSearchItems" parent="." instance=ExtResource("2_0fwp8")]
@@ -165,92 +166,6 @@ collision_mask = 3
 zoom = Vector2(5, 5)
 process_callback = 0
 position_smoothing_enabled = true
-
-[node name="ItemGeneration" parent="." instance=ExtResource("4_4gcjf")]
-
-[node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-94, -34)
-
-[node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-16, -76)
-
-[node name="ItemSpace5" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(71, -76)
-
-[node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-64, 65)
-
-[node name="ItemSpace4" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(77, 49)
-
-[node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(216, 297)
-
-[node name="ItemSpace18" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(497, 346)
-
-[node name="ItemSpace19" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(492, 253)
-
-[node name="ItemSpace20" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(456, 208)
-
-[node name="ItemSpace21" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(387, 220)
-
-[node name="ItemSpace22" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(383, 93)
-
-[node name="ItemSpace23" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(264, 96)
-
-[node name="ItemSpace24" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(323, 94)
-
-[node name="ItemSpace25" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(229, 148)
-
-[node name="ItemSpace26" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(208, 70)
-
-[node name="ItemSpace27" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(228, 34)
-
-[node name="ItemSpace28" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(261, 26)
-
-[node name="ItemSpace6" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(106, 14)
-
-[node name="ItemSpace7" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(25, 9)
-
-[node name="ItemSpace8" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(3, 161)
-
-[node name="ItemSpace9" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-42, 243)
-
-[node name="ItemSpace10" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-164, 251)
-
-[node name="ItemSpace11" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(-144, 220)
-
-[node name="ItemSpace12" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(61, 260)
-
-[node name="ItemSpace13" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(83, 189)
-
-[node name="ItemSpace14" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(147, 204)
-
-[node name="ItemSpace15" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(219, 189)
-
-[node name="ItemSpace16" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(265, 326)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -542,6 +457,92 @@ texture = ExtResource("21_xxrky")
 position = Vector2(207, 98)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("22_hfgiu")
+
+[node name="ItemGeneration" parent="." instance=ExtResource("4_4gcjf")]
+
+[node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-94, -34)
+
+[node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-16, -76)
+
+[node name="ItemSpace5" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(71, -76)
+
+[node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-64, 65)
+
+[node name="ItemSpace4" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(77, 49)
+
+[node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(216, 297)
+
+[node name="ItemSpace18" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(497, 346)
+
+[node name="ItemSpace19" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(492, 253)
+
+[node name="ItemSpace20" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(456, 208)
+
+[node name="ItemSpace21" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(388, 213)
+
+[node name="ItemSpace22" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(383, 93)
+
+[node name="ItemSpace23" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(267, 95)
+
+[node name="ItemSpace24" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(323, 94)
+
+[node name="ItemSpace25" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(229, 148)
+
+[node name="ItemSpace26" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(208, 70)
+
+[node name="ItemSpace27" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(228, 34)
+
+[node name="ItemSpace28" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(261, 26)
+
+[node name="ItemSpace6" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(106, 14)
+
+[node name="ItemSpace7" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(25, 9)
+
+[node name="ItemSpace8" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(3, 161)
+
+[node name="ItemSpace9" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-42, 243)
+
+[node name="ItemSpace10" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-178, 230)
+
+[node name="ItemSpace11" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(-144, 220)
+
+[node name="ItemSpace12" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(61, 260)
+
+[node name="ItemSpace13" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(83, 189)
+
+[node name="ItemSpace14" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(147, 204)
+
+[node name="ItemSpace15" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(219, 189)
+
+[node name="ItemSpace16" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+position = Vector2(265, 326)
 
 [node name="Table" parent="." instance=ExtResource("23_xtwq8")]
 light_mask = 1
