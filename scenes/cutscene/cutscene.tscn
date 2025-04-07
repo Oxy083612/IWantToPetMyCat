@@ -1,15 +1,29 @@
 [gd_scene load_steps=3 format=3 uid="uid://c2hdx7qoqnpu4"]
 
 [ext_resource type="Script" uid="uid://bxwssruam3o40" path="res://scripts/cutscene/cutscene.gd" id="1_vayev"]
-
-[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_edmg7"]
+[ext_resource type="VideoStream" uid="uid://c0olblffet4uc" path="res://video/story.ogv" id="2_0lphj"]
 
 [node name="Cutscene" type="Node2D"]
+scale = Vector2(1.03948, 1.07368)
 script = ExtResource("1_vayev")
 
 [node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-stream = SubResource("VideoStreamTheora_edmg7")
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -640.0
+offset_top = -360.0
+offset_right = 640.0
+offset_bottom = 360.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.6, 1.453)
+pivot_offset = Vector2(640, 360)
+size_flags_vertical = 4
+stream = ExtResource("2_0lphj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
