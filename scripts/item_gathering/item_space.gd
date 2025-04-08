@@ -9,8 +9,7 @@ extends Node
 
 func _ready():
 	player.destroy_item.connect(_on_item_destroy)
-	player.show_item.connect(_on_item_show)
-	player.hide_item.connect(_on_item_hide)
+	player.show_item_name.connect(_on_item_show)
 
 func _on_item_destroy(id):
 	if item_name == null:
@@ -27,10 +26,3 @@ func _on_item_show(id):
 	if(self.get_instance_id() != id):
 		return
 	label_desc.text = item_name
-
-func _on_item_hide(id):
-	if item_name == null:
-		return
-	if(self.get_instance_id() != id):
-		return
-	label_desc.text = ""
