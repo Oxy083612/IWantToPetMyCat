@@ -67,7 +67,7 @@ size = Vector2(20, 175)
 size = Vector2(46.5, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bjfvr"]
-size = Vector2(33, 29)
+size = Vector2(33, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_run3u"]
 size = Vector2(50, 65)
@@ -158,15 +158,6 @@ script = ExtResource("1_lwume")
 
 [node name="HUDSearchItems" parent="." instance=ExtResource("2_0fwp8")]
 
-[node name="Player" parent="." instance=ExtResource("3_4uyn0")]
-position = Vector2(0, -17)
-collision_mask = 3
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-zoom = Vector2(5, 5)
-process_callback = 0
-position_smoothing_enabled = true
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
@@ -240,7 +231,7 @@ position = Vector2(-216, 273)
 shape = SubResource("RectangleShape2D_aonke")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(-97.5, 38.5)
+position = Vector2(-97.5, 26)
 shape = SubResource("RectangleShape2D_bjfvr")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="StaticBody2D"]
@@ -384,6 +375,8 @@ scale = Vector2(1.7, 1.7)
 texture = ExtResource("11_e8qap")
 
 [node name="Sprite2D7" type="Sprite2D" parent="StaticBody2D"]
+z_index = 100
+z_as_relative = false
 position = Vector2(211, 102)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("12_0mxfq")
@@ -458,21 +451,35 @@ position = Vector2(207, 98)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("22_hfgiu")
 
+[node name="Player" parent="." instance=ExtResource("3_4uyn0")]
+position = Vector2(0, -17)
+collision_mask = 3
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(5, 5)
+process_callback = 0
+position_smoothing_enabled = true
+
 [node name="ItemGeneration" parent="." instance=ExtResource("4_4gcjf")]
 
 [node name="ItemSpace" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(-94, -34)
 
 [node name="ItemSpace3" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+z_index = 1
+z_as_relative = false
 position = Vector2(-16, -76)
 
 [node name="ItemSpace5" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(71, -76)
 
 [node name="ItemSpace2" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+z_index = 1
+z_as_relative = false
 position = Vector2(-64, 65)
 
 [node name="ItemSpace4" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
+z_as_relative = false
 position = Vector2(77, 49)
 
 [node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
@@ -515,7 +522,9 @@ position = Vector2(261, 26)
 position = Vector2(106, 14)
 
 [node name="ItemSpace7" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-position = Vector2(25, 9)
+z_index = 1
+z_as_relative = false
+position = Vector2(-17, 39)
 
 [node name="ItemSpace8" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 position = Vector2(3, 161)

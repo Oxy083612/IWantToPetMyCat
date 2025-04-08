@@ -45,6 +45,7 @@ func _physics_process(_delta: float) -> void:
 
 func _on_area_2d_body_entered(body) -> void:
 	emit_signal("show_item", body.get_instance_id())
+	print(body.get_instance_id())
 	if not can_get_items:
 		return
 	if item_held == null and body != table:

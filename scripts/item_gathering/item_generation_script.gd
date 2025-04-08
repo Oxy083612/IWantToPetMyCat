@@ -14,31 +14,28 @@ var tapes = ItemsPool.get_tapes()
 func _ready():		
 	number_of_items = (int) ((item_space_list.size() * 3) / 4)
 	item_space_list_tmp = item_space_list.duplicate(true)
-	
-	var chosen_tapes = 0
-	while chosen_tapes < min_tapes:
-		var choice = randi() % item_space_list_tmp.size()
-		var tmp = item_space_list_tmp.pick_random()
-		item_space_list_tmp.erase(tmp)
-		tmp.add_child(item.instantiate())
-		item_list.append(tmp.get_node("Item"))
-		var picked_item = _pick_tape()
-		var item_name = picked_item["name"]
-		item_space_list[choice].item_name = item_name
-		emit_signal("change_item", item_name)
-		chosen_tapes += 1
-	
-	for x in range(number_of_items - min_tapes):
-		var tmp = item_space_list_tmp.pick_random()
-		item_space_list_tmp.erase(tmp)
-		tmp.add_child(item.instantiate())
-		item_list.append(tmp.get_node("Item"))
-		var picked_item = _pick_item_from_list()
-		var item_name = picked_item["name"]
-		item_space_list[x].item_name = item_name
-		emit_signal("change_item", item_name)
 
-func _pick_tape():
+	var added_tapes = 0
+	var added_items = 0
+	while added_items < number_of_items or added_tapes < min_tapes:
+		var tmp = item_space_list_tmp.pick_random()
+		item_space_list_tmp.erase(tmp)
+		tmp.add_child(item.instantiate())
+		item_list.append(tmp.get_node("Item"))
+		var picked_item
+		if added_items < number_of_items:
+			picked_item = _pick_item_from_list()
+		else:
+			picked_item = _pick_tape_from_list()
+		var item_name = picked_item["name"]
+		tmp.item_name = item_name
+		emit_signal("change_item", item_name)
+		added_items += 1
+		if picked_item["type"] == ItemsPool.item_types.tape:
+			added_tapes += 1
+		
+		
+func _pick_tape_from_list():
 	var choice = tapes[randi() % tapes.size()]
 	return ItemsPool.items[choice]
 
