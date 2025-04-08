@@ -1,7 +1,7 @@
 [gd_scene load_steps=17 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat/pat_pat_scene.gd" id="1_xkuku"]
-[ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/cat/CatBC.png" id="2_qgess"]
+[ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_qgess"]
 [ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="3_si1rj"]
 [ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="4_w1pfp"]
 [ext_resource type="Texture2D" uid="uid://bn3y23mflbni0" path="res://images/cat/Cat-3.png" id="5_ifaww"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_etgun"]
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
-[ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/cat/dymek.png" id="13_vveds"]
+[ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/hud/dymek.png" id="13_vveds"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{

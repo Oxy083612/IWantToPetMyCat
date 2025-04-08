@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxmcduvxyumjn"
-path="res://.godot/imported/blat.png-28213c021cc68a390368275d0d60facd.ctex"
+uid="uid://dgn25pyablbvd"
+path="res://.godot/imported/szafki.png-7e6bbc5ee6660638741ae60259ac7344.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/blat.png"
-dest_files=["res://.godot/imported/blat.png-28213c021cc68a390368275d0d60facd.ctex"]
+source_file="res://images/furniture/szafki.png"
+dest_files=["res://.godot/imported/szafki.png-7e6bbc5ee6660638741ae60259ac7344.ctex"]
 
 [params]
 

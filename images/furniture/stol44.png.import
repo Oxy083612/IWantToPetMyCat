@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d06r540ogx5fc"
-path="res://.godot/imported/CatBC.png-fa21f3401b1b5ac6056345531ca438c4.ctex"
+uid="uid://cyfrtubtgd5oa"
+path="res://.godot/imported/stol44.png-5a69dc6e5b5c9f4fc0af1c3d60358aa7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/cat/CatBC.png"
-dest_files=["res://.godot/imported/CatBC.png-fa21f3401b1b5ac6056345531ca438c4.ctex"]
+source_file="res://images/furniture/stol44.png"
+dest_files=["res://.godot/imported/stol44.png-5a69dc6e5b5c9f4fc0af1c3d60358aa7.ctex"]
 
 [params]
 

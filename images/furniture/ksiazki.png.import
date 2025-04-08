@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dtkli1or2un06"
-path="res://.godot/imported/wieszak.png-45701b5494ebd4a6ebc30be61f8bf426.ctex"
+uid="uid://ddwqt4fhm2dau"
+path="res://.godot/imported/ksiazki.png-f809a936d46be92cda131348311a056f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/wieszak.png"
-dest_files=["res://.godot/imported/wieszak.png-45701b5494ebd4a6ebc30be61f8bf426.ctex"]
+source_file="res://images/furniture/ksiazki.png"
+dest_files=["res://.godot/imported/ksiazki.png-f809a936d46be92cda131348311a056f.ctex"]
 
 [params]
 

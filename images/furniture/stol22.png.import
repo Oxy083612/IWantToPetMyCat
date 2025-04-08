@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cdkyf71jl5hdt"
-path="res://.godot/imported/taboret.png-e05814d45c03a197a9cf82fdcdb43508.ctex"
+uid="uid://b7e6vbgxwyyn1"
+path="res://.godot/imported/stol22.png-602ff71e6c1424da7a9cf1c67305cdcc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/taboret.png"
-dest_files=["res://.godot/imported/taboret.png-e05814d45c03a197a9cf82fdcdb43508.ctex"]
+source_file="res://images/furniture/stol22.png"
+dest_files=["res://.godot/imported/stol22.png-602ff71e6c1424da7a9cf1c67305cdcc.ctex"]
 
 [params]
 

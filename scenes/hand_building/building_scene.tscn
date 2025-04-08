@@ -9,7 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="7_2kv8c"]
 [ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="8_q8bcx"]
 [ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="9_fp4ul"]
-[ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/stol.png" id="10_yij7t"]
+[ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/backgrounds/stol.png" id="10_yij7t"]
 
 [sub_resource type="GDScript" id="GDScript_mrgcu"]
 script/source = "extends TextureButton

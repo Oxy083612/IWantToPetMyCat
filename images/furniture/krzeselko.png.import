@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpboti52v4xdg"
-path="res://.godot/imported/komoda.png-1b380d491047ba654742970e64868eac.ctex"
+uid="uid://cgxh7hnejneme"
+path="res://.godot/imported/krzeselko.png-87800fdf4c2ed9632a5adb699a3066f4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/komoda.png"
-dest_files=["res://.godot/imported/komoda.png-1b380d491047ba654742970e64868eac.ctex"]
+source_file="res://images/furniture/krzeselko.png"
+dest_files=["res://.godot/imported/krzeselko.png-87800fdf4c2ed9632a5adb699a3066f4.ctex"]
 
 [params]
 

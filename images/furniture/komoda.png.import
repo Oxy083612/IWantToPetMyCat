@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://f7iy4m1gnvd3"
-path="res://.godot/imported/lampa2.png-00430fca715c750dc8d9fa12f408362e.ctex"
+uid="uid://dpboti52v4xdg"
+path="res://.godot/imported/komoda.png-81b42ab8c7f73871c045d5803babe0bc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/lampa2.png"
-dest_files=["res://.godot/imported/lampa2.png-00430fca715c750dc8d9fa12f408362e.ctex"]
+source_file="res://images/furniture/komoda.png"
+dest_files=["res://.godot/imported/komoda.png-81b42ab8c7f73871c045d5803babe0bc.ctex"]
 
 [params]
 

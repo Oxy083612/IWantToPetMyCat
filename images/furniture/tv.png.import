@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mslt6dej7ilv"
-path="res://.godot/imported/fotel.png-0b2036c5ad3f71c7da6318ae35e75f16.ctex"
+uid="uid://ch8gelsbuncsl"
+path="res://.godot/imported/tv.png-324015d01ac8c77bbd42c00d670ad263.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/fotel.png"
-dest_files=["res://.godot/imported/fotel.png-0b2036c5ad3f71c7da6318ae35e75f16.ctex"]
+source_file="res://images/furniture/tv.png"
+dest_files=["res://.godot/imported/tv.png-324015d01ac8c77bbd42c00d670ad263.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1m3elj8cf4ci"
-path="res://.godot/imported/szafka.png-d6e91876536b8f67838c42ad58306009.ctex"
+uid="uid://dnff4sq2l8e48"
+path="res://.godot/imported/donic.png-376db6ce53a278eaaa0965a054b41c8f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/szafka.png"
-dest_files=["res://.godot/imported/szafka.png-d6e91876536b8f67838c42ad58306009.ctex"]
+source_file="res://images/furniture/donic.png"
+dest_files=["res://.godot/imported/donic.png-376db6ce53a278eaaa0965a054b41c8f.ctex"]
 
 [params]
 

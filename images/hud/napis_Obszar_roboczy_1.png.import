@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba24cbduc2lia"
-path="res://.godot/imported/stol.png-160b5eb33abe36f2993da3dbd886b1f0.ctex"
+uid="uid://s68ih8jw2xd7"
+path="res://.godot/imported/napis_Obszar_roboczy_1.png-7a041268e482bf12c889ad44a5465f8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/stol.png"
-dest_files=["res://.godot/imported/stol.png-160b5eb33abe36f2993da3dbd886b1f0.ctex"]
+source_file="res://images/hud/napis_Obszar_roboczy_1.png"
+dest_files=["res://.godot/imported/napis_Obszar_roboczy_1.png-7a041268e482bf12c889ad44a5465f8a.ctex"]
 
 [params]
 

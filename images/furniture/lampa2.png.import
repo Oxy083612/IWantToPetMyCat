@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://s68ih8jw2xd7"
-path="res://.godot/imported/napis_Obszar_roboczy_1.png-bb518fc1e579d23a1b9ca8cda5e41bb4.ctex"
+uid="uid://f7iy4m1gnvd3"
+path="res://.godot/imported/lampa2.png-e29feab31794796e4d36962969e1afb9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/napis_Obszar_roboczy_1.png"
-dest_files=["res://.godot/imported/napis_Obszar_roboczy_1.png-bb518fc1e579d23a1b9ca8cda5e41bb4.ctex"]
+source_file="res://images/furniture/lampa2.png"
+dest_files=["res://.godot/imported/lampa2.png-e29feab31794796e4d36962969e1afb9.ctex"]
 
 [params]
 

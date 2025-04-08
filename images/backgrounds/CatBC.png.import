@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddwqt4fhm2dau"
-path="res://.godot/imported/ksiazki.png-ee3a19e1544e32b336f661d3ee533e61.ctex"
+uid="uid://d06r540ogx5fc"
+path="res://.godot/imported/CatBC.png-b8cc07c37c5ba81e3b8111ccab5ad29d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/ksiazki.png"
-dest_files=["res://.godot/imported/ksiazki.png-ee3a19e1544e32b336f661d3ee533e61.ctex"]
+source_file="res://images/backgrounds/CatBC.png"
+dest_files=["res://.godot/imported/CatBC.png-b8cc07c37c5ba81e3b8111ccab5ad29d.ctex"]
 
 [params]
 

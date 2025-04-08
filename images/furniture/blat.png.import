@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnff4sq2l8e48"
-path="res://.godot/imported/donic.png-b89d992ce11a0a16cf433e400070a610.ctex"
+uid="uid://bxmcduvxyumjn"
+path="res://.godot/imported/blat.png-c9d76aeaedb28db4c8390c255be4366f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/donic.png"
-dest_files=["res://.godot/imported/donic.png-b89d992ce11a0a16cf433e400070a610.ctex"]
+source_file="res://images/furniture/blat.png"
+dest_files=["res://.godot/imported/blat.png-c9d76aeaedb28db4c8390c255be4366f.ctex"]
 
 [params]
 

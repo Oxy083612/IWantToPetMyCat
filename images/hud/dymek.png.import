@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgn25pyablbvd"
-path="res://.godot/imported/szafki.png-7b2a0faee215a7dde0971ef27d31f622.ctex"
+uid="uid://cqog6q7w2nvqe"
+path="res://.godot/imported/dymek.png-f9284e8f91c235a65aa1fbedb65e1396.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/items/szafki.png"
-dest_files=["res://.godot/imported/szafki.png-7b2a0faee215a7dde0971ef27d31f622.ctex"]
+source_file="res://images/hud/dymek.png"
+dest_files=["res://.godot/imported/dymek.png-f9284e8f91c235a65aa1fbedb65e1396.ctex"]
 
 [params]
 
