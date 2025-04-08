@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cl6lkcystendb"
-path="res://.godot/imported/szafka.png-4a8e67246c2db61bab11d84d4fcdadd0.ctex"
+uid="uid://djwh5yoywiea4"
+path="res://.godot/imported/map-all.png-920106b3e0c013f0f5b0a41b44d7eb05.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://images/furniture/szafka.png"
-dest_files=["res://.godot/imported/szafka.png-4a8e67246c2db61bab11d84d4fcdadd0.ctex"]
+source_file="res://images/backgrounds/map-all.png"
+dest_files=["res://.godot/imported/map-all.png-920106b3e0c013f0f5b0a41b44d7eb05.ctex"]
 
 [params]
 

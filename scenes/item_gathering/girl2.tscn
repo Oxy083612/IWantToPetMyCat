@@ -1,7 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://245n4b30il23"]
+[gd_scene load_steps=5 format=3 uid="uid://dhah2xqshaif2"]
 
-[ext_resource type="Script" uid="uid://ohkan0n7pck6" path="res://scripts/item_gathering/girl.gd" id="1_3vyb7"]
-[ext_resource type="SpriteFrames" uid="uid://bcyrd6tchbscw" path="res://scenes/item_gathering/girl2.tres" id="1_sh5cg"]
+[ext_resource type="Script" uid="uid://4g5e05qyyp8v" path="res://scripts/item_gathering/girl2.gd" id="1_psxtn"]
+[ext_resource type="SpriteFrames" uid="uid://bcyrd6tchbscw" path="res://scenes/item_gathering/girl2.tres" id="2_psxtn"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ke2ow"]
 radius = 12.0
@@ -10,15 +10,12 @@ height = 52.0
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(21, 8.5)
 
-[node name="Player" type="AnimatedSprite2D"]
+[node name="Player" type="CharacterBody2D"]
 z_as_relative = false
 y_sort_enabled = true
-sprite_frames = ExtResource("1_sh5cg")
-animation = &"idle_front"
-script = ExtResource("1_3vyb7")
+script = ExtResource("1_psxtn")
 
 [node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(1, 1)
 collision_layer = 0
 collision_mask = 6
 
@@ -27,15 +24,16 @@ position = Vector2(0, -2)
 scale = Vector2(1, -1)
 shape = SubResource("CapsuleShape2D_ke2ow")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = 90
 texture_filter = 1
 scale = Vector2(1.6, 1.6)
-slide_on_ceiling = false
+sprite_frames = ExtResource("2_psxtn")
+animation = &"idle_back"
+autoplay = "idle_front"
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0.3125, 13.2812)
-scale = Vector2(0.625, 0.625)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 21.25)
 shape = SubResource("RectangleShape2D_g2els")
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

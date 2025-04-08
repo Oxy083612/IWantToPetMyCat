@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bm5fbesiidtpp" path="res://scripts/item_gathering/pickup_item.gd" id="1_y2gut"]
 
 [node name="Item" type="Node2D"]
+z_index = -1
 script = ExtResource("1_y2gut")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

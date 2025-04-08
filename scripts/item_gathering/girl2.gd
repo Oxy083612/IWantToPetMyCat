@@ -1,13 +1,13 @@
-extends AnimatedSprite2D
+extends CharacterBody2D
 signal destroy_item(id)
 signal show_item(id)
 signal hide_item(id)
 
-const SPEED = 150
+const SPEED = 150.0
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var table: StaticBody2D = $"../Table"
-@onready var area_2d: Area2D = $CharacterBody2D/Area2D
+@onready var area_2d: Area2D = $Area2D
 @onready var label_desc: Label = $"../HUDSearchItems/Label"
-@onready var character_body_2d: CharacterBody2D = $CharacterBody2D
 
 
 enum DIRECTION {front, right, back, left}
@@ -15,38 +15,32 @@ var dir = DIRECTION.front
 @export var item_held = null
 var can_get_items = false
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void:	
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if(input_direction[0] > 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_right")
+	if(input_direction[0] > 0 and velocity != Vector2.ZERO):
+		sprite.play("walk_right")
 		dir = DIRECTION.right
-	if(input_direction[0] < 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_left")
+	if(input_direction[0] < 0 and velocity != Vector2.ZERO):
+		sprite.play("walk_left")
 		dir = DIRECTION.left
-	if(input_direction[1] > 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_front")
+	if(input_direction[1] > 0 and velocity != Vector2.ZERO):
+		sprite.play("walk_front")
 		dir = DIRECTION.front
-	if(input_direction[1] < 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_back")
+	if(input_direction[1] < 0 and velocity != Vector2.ZERO):
+		sprite.play("walk_back")
 		dir = DIRECTION.back
-	if character_body_2d.velocity == Vector2.ZERO:
+	if velocity == Vector2.ZERO:
 		match dir:
 			DIRECTION.right:
-				play("idle_right")
+				sprite.play("idle_right")
 			DIRECTION.left:
-				play("idle_left")
+				sprite.play("idle_left")
 			DIRECTION.front:
-				play("idle_front")
+				sprite.play("idle_front")
 			DIRECTION.back:
-				play("idle_back")
-	character_body_2d.velocity = input_direction * SPEED
-	character_body_2d.apply_floor_snap()
-	character_body_2d.move_and_slide()
-	global_position = character_body_2d.global_position
-	character_body_2d.position = Vector2.ZERO
-	
-
-	
+				sprite.play("idle_back")
+	velocity = input_direction * SPEED
+	move_and_slide()
 
 
 func _on_area_2d_body_entered(body) -> void:
