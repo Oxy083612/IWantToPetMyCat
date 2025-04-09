@@ -1,4 +1,4 @@
-[gd_scene load_steps=67 format=3 uid="uid://b6n7ve6wxkyir"]
+[gd_scene load_steps=72 format=3 uid="uid://b6n7ve6wxkyir"]
 
 [ext_resource type="Script" uid="uid://c1nvork2gn2r1" path="res://scripts/item_gathering/item_gathering_level.gd" id="1_lwume"]
 [ext_resource type="PackedScene" uid="uid://dh5nyxp606mlk" path="res://scenes/item_gathering/gathering_hud.tscn" id="2_0fwp8"]
@@ -25,10 +25,10 @@
 [ext_resource type="PackedScene" uid="uid://8od55wc1dycj" path="res://scenes/item_gathering/table.tscn" id="23_xtwq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du432"]
-size = Vector2(92, 33)
+size = Vector2(83, 40.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pitd"]
-size = Vector2(437, 81)
+size = Vector2(297, 140.75)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_254j5"]
 size = Vector2(20, 101)
@@ -37,16 +37,16 @@ size = Vector2(20, 101)
 size = Vector2(228.5, 108)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pbjmi"]
-size = Vector2(20, 182)
+size = Vector2(25, 182)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wux0l"]
-size = Vector2(434, 20)
+size = Vector2(434, 19)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2he6h"]
 size = Vector2(17, 286)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_smmwo"]
-size = Vector2(173.5, 139)
+size = Vector2(181, 151.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8xs3"]
 size = Vector2(175, 106)
@@ -58,7 +58,7 @@ size = Vector2(20, 251.5)
 size = Vector2(19, 242)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jssad"]
-size = Vector2(20, 162)
+size = Vector2(33, 164)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2abog"]
 size = Vector2(5, 174)
@@ -76,43 +76,43 @@ size = Vector2(49, 83.5)
 size = Vector2(107.5, 23)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yb585"]
-size = Vector2(96, 34)
+size = Vector2(90, 33.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7km52"]
-size = Vector2(15, 75)
+size = Vector2(16.5, 78)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_msdbh"]
-size = Vector2(40, 43)
+size = Vector2(68.4555, 36.1464)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_del6f"]
-size = Vector2(57, 79)
+size = Vector2(58, 83)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gj763"]
-size = Vector2(25, 12.5)
+size = Vector2(21.8119, 19.0565)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gam5x"]
-size = Vector2(20, 10.75)
+size = Vector2(20, 15.375)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dktxx"]
-size = Vector2(30, 74.5)
+size = Vector2(21, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jbdij"]
-size = Vector2(105, 6)
+size = Vector2(119, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ppmw"]
 size = Vector2(87.2366, 32.1018)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgplo"]
-size = Vector2(128, 37)
+size = Vector2(126, 47)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbmh"]
-size = Vector2(29, 22)
+size = Vector2(52, 38)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6gc2l"]
-size = Vector2(22, 13.5)
+size = Vector2(22, 18.875)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_11hoe"]
-size = Vector2(39, 49)
+size = Vector2(44.5, 77)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iuaup"]
 size = Vector2(82, 55)
@@ -136,22 +136,37 @@ size = Vector2(72, 25.0625)
 size = Vector2(23, 21)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_466qe"]
-size = Vector2(17, 12.125)
+size = Vector2(17, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5kgwd"]
-size = Vector2(26, 35.5)
+size = Vector2(41, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_18ejr"]
-size = Vector2(56.5, 15)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bekr3"]
-size = Vector2(28, 20)
+size = Vector2(36, 18)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lwume"]
-size = Vector2(21.5, 26)
+size = Vector2(24.5, 25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0fwp8"]
-size = Vector2(126, 22)
+size = Vector2(119, 22)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4uyn0"]
+size = Vector2(31.0009, 5.71894)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4gcjf"]
+size = Vector2(34, 12)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdklp"]
+size = Vector2(96, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vf8jj"]
+size = Vector2(19, 23)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fk526"]
+size = Vector2(19, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q5kya"]
+size = Vector2(22, 20)
 
 [node name="SearchItemsLevel" type="Node2D"]
 z_as_relative = false
@@ -165,120 +180,6 @@ z_index = -2
 position = Vector2(223, 105)
 scale = Vector2(1.7, 1.7)
 texture = ExtResource("6_fk526")
-
-[node name="Player" parent="." instance=ExtResource("3_4uyn0")]
-position = Vector2(12, 234)
-scale = Vector2(1.6, 1.6)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-1.52588e-05, -0.625)
-scale = Vector2(0.588235, 0.588235)
-zoom = Vector2(5, 5)
-process_callback = 0
-position_smoothing_enabled = true
-
-[node name="Wardrobe1" type="Sprite2D" parent="."]
-z_as_relative = false
-y_sort_enabled = true
-position = Vector2(-117, 252)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("4_lwume")
-
-[node name="Hanger" type="Sprite2D" parent="."]
-position = Vector2(-204, 243)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("8_q5kya")
-
-[node name="Countertop" type="Sprite2D" parent="."]
-position = Vector2(302, 108)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("9_xhq18")
-
-[node name="Flower2" type="Sprite2D" parent="."]
-position = Vector2(346, 165)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("10_lsdhn")
-
-[node name="Armchair2" type="Sprite2D" parent="."]
-position = Vector2(-93, 32)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("11_e8qap")
-
-[node name="Wardrobe2" type="Sprite2D" parent="."]
-position = Vector2(88, 53)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("12_0mxfq")
-
-[node name="Chair1" type="Sprite2D" parent="."]
-position = Vector2(87, -24)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("13_b6ans")
-
-[node name="Chair2" type="Sprite2D" parent="."]
-position = Vector2(323, 282)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("13_b6ans")
-
-[node name="Bookcase" type="Sprite2D" parent="."]
-position = Vector2(404, 156)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("14_7o1cn")
-
-[node name="Lamp" type="Sprite2D" parent="."]
-position = Vector2(473, 333)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("15_bm20j")
-
-[node name="CraftingTable" type="Sprite2D" parent="."]
-position = Vector2(370, 327)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("16_madm0")
-
-[node name="Stool" type="Sprite2D" parent="."]
-position = Vector2(362, 95)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("17_3xyos")
-
-[node name="Cabinets" type="Sprite2D" parent="."]
-position = Vector2(221, 99)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("18_oxw4x")
-
-[node name="Chair3" type="Sprite2D" parent="."]
-position = Vector2(417, 294)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_reukj")
-
-[node name="Chair4" type="Sprite2D" parent="."]
-position = Vector2(426, 326)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_reukj")
-
-[node name="Chair5" type="Sprite2D" parent="."]
-position = Vector2(320, 359)
-rotation = 3.14159
-scale = Vector2(1.7, -1.7)
-texture = ExtResource("19_reukj")
-
-[node name="Chair6" type="Sprite2D" parent="."]
-position = Vector2(417, 356)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("19_reukj")
-
-[node name="Cat" type="Sprite2D" parent="."]
-position = Vector2(244, 334)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("20_aw3f3")
-
-[node name="TV" type="Sprite2D" parent="."]
-position = Vector2(551, 343)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("21_xxrky")
-
-[node name="Table2" type="Sprite2D" parent="."]
-position = Vector2(522, 264)
-scale = Vector2(1.7, 1.7)
-texture = ExtResource("22_hfgiu")
 
 [node name="ItemGeneration" parent="." instance=ExtResource("4_4gcjf")]
 
@@ -306,15 +207,15 @@ position = Vector2(88, 57)
 
 [node name="ItemSpace17" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 1
-position = Vector2(222, 295)
+position = Vector2(230, 302)
 
 [node name="ItemSpace18" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 1
-position = Vector2(507, 350)
+position = Vector2(508, 358)
 
 [node name="ItemSpace19" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-z_index = 1
-position = Vector2(492, 253)
+z_index = 0
+position = Vector2(518, 288)
 
 [node name="ItemSpace20" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 0
@@ -325,23 +226,20 @@ z_index = 0
 position = Vector2(388, 213)
 
 [node name="ItemSpace22" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-z_index = 0
-z_as_relative = false
-position = Vector2(384, 107)
+z_index = 1
+position = Vector2(385, 112)
 
 [node name="ItemSpace23" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-z_index = 1
-z_as_relative = false
-position = Vector2(267, 95)
+z_index = 0
+position = Vector2(560, 214)
 
 [node name="ItemSpace24" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-z_index = 1
-z_as_relative = false
-position = Vector2(323, 94)
+z_index = 0
+position = Vector2(413, 58)
 
 [node name="ItemSpace25" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 0
-position = Vector2(229, 148)
+position = Vector2(231, 156)
 
 [node name="ItemSpace26" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 1
@@ -354,7 +252,7 @@ position = Vector2(228, 34)
 
 [node name="ItemSpace28" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 0
-position = Vector2(268, 26)
+position = Vector2(347, 25)
 
 [node name="ItemSpace6" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 0
@@ -394,25 +292,140 @@ z_index = 0
 position = Vector2(147, 204)
 
 [node name="ItemSpace15" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
-z_index = 0
-position = Vector2(227, 197)
+z_index = 2
+z_as_relative = false
+position = Vector2(287, 84)
 
 [node name="ItemSpace16" parent="ItemGeneration" instance=ExtResource("5_mdklp")]
 z_index = 0
-position = Vector2(265, 326)
+position = Vector2(276, 340)
+
+[node name="Player" parent="." instance=ExtResource("3_4uyn0")]
+position = Vector2(271, 219)
+scale = Vector2(1.6, 1.6)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-1.52588e-05, -0.625)
+scale = Vector2(0.588235, 0.588235)
+zoom = Vector2(5, 5)
+process_callback = 0
+position_smoothing_enabled = true
+
+[node name="Wardrobe1" type="Sprite2D" parent="."]
+z_as_relative = false
+y_sort_enabled = true
+position = Vector2(-119, 251)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("4_lwume")
+
+[node name="Hanger" type="Sprite2D" parent="."]
+position = Vector2(-205, 241)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("8_q5kya")
+
+[node name="Countertop" type="Sprite2D" parent="."]
+position = Vector2(312, 108)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("9_xhq18")
+
+[node name="Flower2" type="Sprite2D" parent="."]
+position = Vector2(346, 165)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("10_lsdhn")
+
+[node name="Armchair2" type="Sprite2D" parent="."]
+position = Vector2(-90, 32)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("11_e8qap")
+
+[node name="Wardrobe2" type="Sprite2D" parent="."]
+position = Vector2(86, 52)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("12_0mxfq")
+
+[node name="Chair1" type="Sprite2D" parent="."]
+position = Vector2(87, -24)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("13_b6ans")
+
+[node name="Chair2" type="Sprite2D" parent="."]
+position = Vector2(323, 282)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("13_b6ans")
+
+[node name="Bookcase" type="Sprite2D" parent="."]
+position = Vector2(404, 156)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("14_7o1cn")
+
+[node name="Lamp" type="Sprite2D" parent="."]
+position = Vector2(481, 333)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("15_bm20j")
+
+[node name="CraftingTable" type="Sprite2D" parent="."]
+position = Vector2(370, 327)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("16_madm0")
+
+[node name="Stool" type="Sprite2D" parent="."]
+position = Vector2(371, 90)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("17_3xyos")
+
+[node name="Cabinets" type="Sprite2D" parent="."]
+position = Vector2(225, 107)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("18_oxw4x")
+
+[node name="Chair3" type="Sprite2D" parent="."]
+position = Vector2(417, 294)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("19_reukj")
+
+[node name="Chair4" type="Sprite2D" parent="."]
+position = Vector2(426, 326)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("19_reukj")
+
+[node name="Chair5" type="Sprite2D" parent="."]
+position = Vector2(320, 359)
+rotation = 3.14159
+scale = Vector2(1.7, -1.7)
+texture = ExtResource("19_reukj")
+
+[node name="Chair6" type="Sprite2D" parent="."]
+position = Vector2(417, 356)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("19_reukj")
+
+[node name="Cat" type="Sprite2D" parent="."]
+position = Vector2(253, 339)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("20_aw3f3")
+
+[node name="TV" type="Sprite2D" parent="."]
+position = Vector2(559, 342)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("21_xxrky")
+
+[node name="Table2" type="Sprite2D" parent="."]
+position = Vector2(522, 264)
+scale = Vector2(1.7, 1.7)
+texture = ExtResource("22_hfgiu")
 
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(409, 190)
+position = Vector2(413.5, 193.75)
 shape = SubResource("RectangleShape2D_du432")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(383, 0)
+position = Vector2(323, -6.375)
 shape = SubResource("RectangleShape2D_7pitd")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(2, -116)
+position = Vector2(7.5, -105.75)
 shape = SubResource("RectangleShape2D_7pitd")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Collisions"]
@@ -424,23 +437,19 @@ position = Vector2(-130.25, 155)
 shape = SubResource("RectangleShape2D_ysykw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-242, 201)
+position = Vector2(-239.5, 201)
 shape = SubResource("RectangleShape2D_pbjmi")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-18, 338.5)
-shape = SubResource("RectangleShape2D_7pitd")
-
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(407, 409)
+position = Vector2(407, 409.5)
 shape = SubResource("RectangleShape2D_wux0l")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(618, 249)
+position = Vector2(624, 252)
 shape = SubResource("RectangleShape2D_2he6h")
 
 [node name="CollisionShape2D9" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(118.75, 152)
+position = Vector2(122.5, 158.25)
 shape = SubResource("RectangleShape2D_smmwo")
 
 [node name="CollisionShape2D10" type="CollisionShape2D" parent="Collisions"]
@@ -457,7 +466,7 @@ position = Vector2(148.5, -30)
 shape = SubResource("RectangleShape2D_o23oa")
 
 [node name="CollisionShape2D13" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(191, 16)
+position = Vector2(197.5, 17)
 shape = SubResource("RectangleShape2D_jssad")
 
 [node name="CollisionShape2D14" type="CollisionShape2D" parent="Collisions"]
@@ -465,11 +474,11 @@ position = Vector2(445.5, 24)
 shape = SubResource("RectangleShape2D_2abog")
 
 [node name="CollisionShape2D15" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-208, 287.25)
+position = Vector2(-206, 284)
 shape = SubResource("RectangleShape2D_aonke")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-93, 55.5)
+position = Vector2(-90, 55)
 shape = SubResource("RectangleShape2D_bjfvr")
 
 [node name="CollisionShape2D17" type="CollisionShape2D" parent="Collisions"]
@@ -481,35 +490,38 @@ position = Vector2(121.75, 230)
 shape = SubResource("RectangleShape2D_7elm5")
 
 [node name="CollisionShape2D20" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(301, 125)
+position = Vector2(312, 128)
 shape = SubResource("RectangleShape2D_yb585")
 
 [node name="CollisionShape2D21" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(215.5, 107.5)
+position = Vector2(221.75, 118)
 shape = SubResource("RectangleShape2D_7km52")
 
 [node name="CollisionShape2D22" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(424, 42)
+position = Vector2(423.67, 62.1371)
+rotation = 0.47822
 shape = SubResource("RectangleShape2D_msdbh")
 
 [node name="CollisionShape2D23" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(361.5, 340.5)
+position = Vector2(370, 342.5)
 shape = SubResource("RectangleShape2D_del6f")
 
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(321, 301.25)
+position = Vector2(322.534, 306.467)
+rotation = 0.120428
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gj763")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(319, 375.375)
+position = Vector2(321, 380)
 shape = SubResource("RectangleShape2D_gam5x")
 
 [node name="CollisionShape2D26" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(420, 342.25)
+position = Vector2(424.5, 348)
 shape = SubResource("RectangleShape2D_dktxx")
 
 [node name="CollisionShape2D27" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(540, 381)
+position = Vector2(558.5, 386)
 shape = SubResource("RectangleShape2D_jbdij")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Collisions"]
@@ -518,19 +530,19 @@ rotation = -0.0872665
 shape = SubResource("RectangleShape2D_0ppmw")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(504, 210.5)
+position = Vector2(505, 215.5)
 shape = SubResource("RectangleShape2D_pgplo")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(581.5, 203)
+position = Vector2(593, 211)
 shape = SubResource("RectangleShape2D_ntbmh")
 
 [node name="CollisionShape2D31" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(473, 376.75)
+position = Vector2(481, 379)
 shape = SubResource("RectangleShape2D_6gc2l")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(222, 346)
+position = Vector2(224.75, 361.5)
 shape = SubResource("RectangleShape2D_11hoe")
 
 [node name="CollisionShape2D33" type="CollisionShape2D" parent="Collisions"]
@@ -562,28 +574,51 @@ position = Vector2(-138.5, 216.5)
 shape = SubResource("RectangleShape2D_e80me")
 
 [node name="CollisionShape2D42" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(362, 104.063)
+position = Vector2(371, 109)
 shape = SubResource("RectangleShape2D_466qe")
 
 [node name="CollisionShape2D43" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(213, 180.25)
+position = Vector2(220.5, 188)
 shape = SubResource("RectangleShape2D_5kgwd")
 
 [node name="CollisionShape2D44" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(328.25, 178)
+position = Vector2(354, 191)
 shape = SubResource("RectangleShape2D_18ejr")
 
-[node name="CollisionShape2D45" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(348, 185)
-shape = SubResource("RectangleShape2D_bekr3")
-
 [node name="CollisionShape2D46" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-29.75, 220)
+position = Vector2(-25, 219)
+rotation = -0.23911
 shape = SubResource("RectangleShape2D_lwume")
 
 [node name="CollisionShape2D37" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(-123, 294)
+position = Vector2(-119.5, 288)
 shape = SubResource("RectangleShape2D_0fwp8")
+
+[node name="CollisionShape2D38" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(-25.5922, 345)
+rotation = -3.14159
+scale = Vector2(14.6184, 17.1361)
+shape = SubResource("RectangleShape2D_4uyn0")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(319, 188)
+shape = SubResource("RectangleShape2D_4gcjf")
+
+[node name="CollisionShape2D45" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(86, 85)
+shape = SubResource("RectangleShape2D_mdklp")
+
+[node name="CollisionShape2D48" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(415.5, 376.5)
+shape = SubResource("RectangleShape2D_vf8jj")
+
+[node name="CollisionShape2D47" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(415.5, 319.5)
+shape = SubResource("RectangleShape2D_fk526")
+
+[node name="CollisionShape2D49" type="CollisionShape2D" parent="Collisions"]
+position = Vector2(579, 229)
+shape = SubResource("RectangleShape2D_q5kya")
 
 [node name="Table" parent="." instance=ExtResource("23_xtwq8")]
 visible = false
