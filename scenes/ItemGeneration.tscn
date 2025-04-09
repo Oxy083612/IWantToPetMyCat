@@ -1,6 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://07f74yx2l1ja"]
-
-[ext_resource type="Script" uid="uid://bpw6gp4hxji2d" path="res://scripts/item_generation_script.gd" id="1_uksmb"]
-
-[node name="ItemGeneration" type="Node"]
-script = ExtResource("1_uksmb")

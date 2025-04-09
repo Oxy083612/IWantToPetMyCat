@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ppcuj5rbu036"]
+
+[ext_resource type="Script" uid="uid://duc3myb85m1da" path="res://scripts/item_gathering/item_space.gd" id="2_feapb"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_loiqe"]
+radius = 48.0
+
+[node name="ItemSpace" type="StaticBody2D"]
+z_index = -1
+scale = Vector2(0.5, 0.5)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("2_feapb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_loiqe")

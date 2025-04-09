@@ -10,18 +10,18 @@ config_version=5
 
 [application]
 
-config/name="project-x"
-run/main_scene="uid://bld3xdv1s1sma"
+config/name="I want to pet my cat"
+run/main_scene="uid://c2hdx7qoqnpu4"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-ItemsPool="*res://scenes/items_pool.tscn"
-Equipment="*res://scenes/equipment.tscn"
-Hand="*res://scenes/hand.tscn"
-GameLoop="*res://scenes/game_loop.tscn"
-Music="*res://scenes/music.tscn"
+ItemsPool="*res://scenes/common/items/items_pool.tscn"
+Equipment="*res://scenes/common/items/equipment.tscn"
+Hand="*res://scenes/common/items/hand.tscn"
+GameLoop="*res://scenes/common/game_loop.tscn"
+Music="*res://scenes/common/music.tscn"
 
 [display]
 

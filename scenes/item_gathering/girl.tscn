@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://245n4b30il23"]
+
+[ext_resource type="Script" uid="uid://ohkan0n7pck6" path="res://scripts/item_gathering/girl.gd" id="1_3vyb7"]
+[ext_resource type="SpriteFrames" uid="uid://bcyrd6tchbscw" path="res://scenes/item_gathering/girl.tres" id="1_sh5cg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ke2ow"]
+radius = 12.0
+height = 52.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
+size = Vector2(21, 8.5)
+
+[node name="Player" type="AnimatedSprite2D"]
+z_as_relative = false
+y_sort_enabled = true
+sprite_frames = ExtResource("1_sh5cg")
+animation = &"idle_front"
+script = ExtResource("1_3vyb7")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -2)
+scale = Vector2(1, -1)
+shape = SubResource("CapsuleShape2D_ke2ow")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+z_index = 90
+texture_filter = 1
+scale = Vector2(1.6, 1.6)
+slide_on_ceiling = false
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="CharacterBody2D"]
+position = Vector2(0.3125, 13.2812)
+scale = Vector2(0.625, 0.625)
+shape = SubResource("RectangleShape2D_g2els")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c4kdpnrnteih8"]
+
+[ext_resource type="Texture2D" uid="uid://collmgoaeek8x" path="res://images/items/big/Biegietka.png" id="1_v2len"]
+
+[node name="ItemLength2" type="Node2D"]
+
+[node name="end" type="Node2D" parent="."]
+position = Vector2(192, 0)
+scale = Vector2(3, 3)
+
+[node name="start" type="Node2D" parent="."]
+scale = Vector2(3, 3)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(102, 3)
+scale = Vector2(3, 3)
+texture = ExtResource("1_v2len")

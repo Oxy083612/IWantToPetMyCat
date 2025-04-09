@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://c2nii6p4tnov4"]
+
+[ext_resource type="Texture2D" uid="uid://enaoydpp331x" path="res://images/items/big/Pilot.png" id="1_35d4s"]
+
+[node name="ItemLength1" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(54, 3)
+scale = Vector2(3, 3)
+texture = ExtResource("1_35d4s")
+
+[node name="end" type="Node2D" parent="."]
+position = Vector2(104, 0)
+scale = Vector2(3, 3)
+
+[node name="start" type="Node2D" parent="."]
+scale = Vector2(3, 3)
