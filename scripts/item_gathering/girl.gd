@@ -14,6 +14,7 @@ enum DIRECTION {front, right, back, left}
 var dir = DIRECTION.front
 @export var item_held = null
 var pickable_bodies = []
+var is_near_table = false
 
 func _physics_process(_delta: float) -> void:
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -52,24 +53,34 @@ func _on_area_2d_body_entered(body) -> void:
 			pickable_bodies.append(body)
 		return
 	if body == table:
-		Equipment.add_item(item_held)
-		label_desc.text = ""
-		item_held = null
+		is_near_table = true
+		label_desc.text = "put " + item_held + " on the table"
 		
 func _on_area_2d_body_exited(body) -> void:
-	if len(pickable_bodies) == 0:
-		return
+	if body.get_instance_id() == table.get_instance_id():
+		if item_held:
+			label_desc.text = "take " + item_held + " to the table"
+		is_near_table = false
 	for pickable_body in pickable_bodies:
 		if body.get_instance_id() == pickable_body.get_instance_id():
 			pickable_bodies.erase(pickable_body)
 	if len(pickable_bodies) > 0:
 		emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
 		return
-	label_desc.text = ""
+	if not item_held:
+		label_desc.text = ""
 
 func _input(event):
-	if event.is_action_pressed("pick_up") and len(pickable_bodies) > 0:
+	if not event.is_action_pressed("pick_up"):
+		return
+	if item_held == null and len(pickable_bodies) > 0:
 		item_held = pickable_bodies[0].item_name
-		label_desc.text = "Return the item to the table"
+		print(item_held)
+		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())
 		pickable_bodies.erase(pickable_bodies[-1])
+		return
+	if item_held != null and is_near_table:
+		Equipment.add_item(item_held)
+		item_held = null
+		label_desc.text = ""

@@ -509,7 +509,6 @@ shape = SubResource("RectangleShape2D_del6f")
 [node name="CollisionShape2D24" type="CollisionShape2D" parent="Collisions"]
 position = Vector2(322.534, 306.467)
 rotation = 0.120428
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_gj763")
 
 [node name="CollisionShape2D25" type="CollisionShape2D" parent="Collisions"]
@@ -621,6 +620,6 @@ position = Vector2(579, 229)
 shape = SubResource("RectangleShape2D_q5kya")
 
 [node name="Table" parent="." instance=ExtResource("23_xtwq8")]
-visible = false
 light_mask = 1
-position = Vector2(361, 313)
+position = Vector2(371, 336)
+scale = Vector2(18.439, 31.6133)
