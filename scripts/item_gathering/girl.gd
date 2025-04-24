@@ -75,7 +75,6 @@ func _input(event):
 		return
 	if item_held == null and len(pickable_bodies) > 0:
 		item_held = pickable_bodies[0].item_name
-		print(item_held)
 		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())
 		pickable_bodies.erase(pickable_bodies[-1])
