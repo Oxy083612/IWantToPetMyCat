@@ -4,7 +4,7 @@ extends CanvasLayer
 @onready var bar: TextureProgressBar = $Bar/TextureProgressBar
 
 #const max_time = 60 # original value
-const max_time = 500 # value used for debug
+const max_time = 15 # value used for debug
 
 func _ready() -> void:
 	timer.start(max_time)
