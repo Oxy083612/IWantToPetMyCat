@@ -1,17 +1,21 @@
 [gd_scene load_steps=2 format=3 uid="uid://c4kdpnrnteih8"]
 
-[ext_resource type="Texture2D" uid="uid://collmgoaeek8x" path="res://images/items/big/Biegietka.png" id="1_v2len"]
+[ext_resource type="Script" uid="uid://cvoq8aqguv7sp" path="res://scenes/hand_building/item_length.gd" id="1_ig6k5"]
 
 [node name="ItemLength2" type="Node2D"]
-
-[node name="end" type="Node2D" parent="."]
-position = Vector2(192, 0)
-scale = Vector2(3, 3)
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_ig6k5")
 
 [node name="start" type="Node2D" parent="."]
-scale = Vector2(3, 3)
+position = Vector2(-1.90735e-06, 0)
+
+[node name="left" type="Node2D" parent="."]
+position = Vector2(142, -20)
+
+[node name="right" type="Node2D" parent="."]
+position = Vector2(142, 20)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(102, 3)
+z_index = 5
+position = Vector2(68, 3)
 scale = Vector2(3, 3)
-texture = ExtResource("1_v2len")
