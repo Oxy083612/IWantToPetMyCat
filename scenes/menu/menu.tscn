@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu/menu.gd" id="1_rrod7"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_faisu"]
-[ext_resource type="Texture2D" uid="uid://c77cekdfhgurc" path="res://scenes/menu/gradient_Obszar_roboczy_1.png" id="3_faisu"]
+[ext_resource type="Texture2D" uid="uid://c77cekdfhgurc" path="res://images/hud/gradient_Obszar_roboczy_1.png" id="3_faisu"]
 [ext_resource type="Texture2D" uid="uid://s68ih8jw2xd7" path="res://images/hud/napis_Obszar_roboczy_1.png" id="3_t2e6u"]
 [ext_resource type="Texture2D" uid="uid://dcji44vo4v2t7" path="res://images/cat/Cat-1.png" id="4_fb4qf"]
 [ext_resource type="Texture2D" uid="uid://b116dprqt5ugl" path="res://images/cat/Cat-2.png" id="5_riv3r"]
@@ -74,12 +74,13 @@ scale = Vector2(8.2, 8.2)
 texture = ExtResource("2_faisu")
 
 [node name="Sprite2D2" type="Sprite2D" parent="."]
-position = Vector2(1300, 541)
+position = Vector2(960, 544)
 scale = Vector2(1.00208, 1.0037)
 texture = ExtResource("3_faisu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(1300, 539)
+visible = false
+position = Vector2(960, 536)
 texture = ExtResource("3_t2e6u")
 
 [node name="Cat" type="AnimatedSprite2D" parent="."]

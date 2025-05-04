@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c6fklq07p1h8c"
-path="res://.godot/imported/napis_Obszar_roboczy_1.png-d46d664c978b5a0b79dbd017e8f65d21.ctex"
+uid="uid://c77cekdfhgurc"
+path="res://.godot/imported/gradient_Obszar_roboczy_1.png-ca165d29dcb2240d1288b5aac68a4c55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/menu/napis_Obszar_roboczy_1.png"
-dest_files=["res://.godot/imported/napis_Obszar_roboczy_1.png-d46d664c978b5a0b79dbd017e8f65d21.ctex"]
+source_file="res://images/hud/gradient_Obszar_roboczy_1.png"
+dest_files=["res://.godot/imported/gradient_Obszar_roboczy_1.png-ca165d29dcb2240d1288b5aac68a4c55.ctex"]
 
 [params]
 
