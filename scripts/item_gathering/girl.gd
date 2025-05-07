@@ -46,14 +46,14 @@ func _physics_process(_delta: float) -> void:
 	global_position = character_body_2d.global_position
 	character_body_2d.position = Vector2.ZERO
 
-func _on_area_2d_body_entered(body) -> void:	
-	if item_held == null:
-		if body != table:
+func _on_area_2d_body_entered(body) -> void:
+	if body != table:
+		pickable_bodies.append(body)
+		if not item_held:
 			emit_signal("show_item_name", body.get_instance_id())
-			pickable_bodies.append(body)
 		return
-	if body == table:
-		is_near_table = true
+	is_near_table = true
+	if item_held:
 		label_desc.text = "put " + item_held + " on the table"
 		
 func _on_area_2d_body_exited(body) -> void:
@@ -64,17 +64,17 @@ func _on_area_2d_body_exited(body) -> void:
 	for pickable_body in pickable_bodies:
 		if body.get_instance_id() == pickable_body.get_instance_id():
 			pickable_bodies.erase(pickable_body)
-	if len(pickable_bodies) > 0:
-		emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
-		return
 	if not item_held:
+		if len(pickable_bodies) > 0:
+			emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
+			return
 		label_desc.text = ""
 
 func _input(event):
 	if not event.is_action_pressed("pick_up"):
 		return
 	if item_held == null and len(pickable_bodies) > 0:
-		item_held = pickable_bodies[0].item_name
+		item_held = pickable_bodies[-1].item_name
 		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())
 		pickable_bodies.erase(pickable_bodies[-1])
@@ -82,4 +82,7 @@ func _input(event):
 	if item_held != null and is_near_table:
 		Equipment.add_item(item_held)
 		item_held = null
-		label_desc.text = ""
+		if len(pickable_bodies) > 0:
+			emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
+		else:
+			label_desc.text = ""
