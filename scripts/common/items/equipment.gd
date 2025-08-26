@@ -4,11 +4,10 @@ enum item_types{
 	stick, tape, end	
 }
 
-var current_items = ["baguette",]
+var current_items = ["baguette","baguette","baguette", "slipper"]
 
 func _return_texture_big_name(item: String):
 	return ItemsPool.items[item].get("texture_big")
-	
 	
 func _return_texture_name(item: String):
 	return ItemsPool.items[item].get("texture")
@@ -21,9 +20,12 @@ func _return_durability(item: String):
 
 func _return_length(item: String):
 	return ItemsPool.items[item].get("length")
+
+func _return_type(item: String):
+	return ItemsPool.items[item].get("type")
 	
 
-@export var tapes = 2
+@export var tapes = 10
 
 func add_item(item):
 	if(ItemsPool.items[item]["type"] == ItemsPool.item_types.tape):

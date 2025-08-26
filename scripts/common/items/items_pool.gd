@@ -50,7 +50,7 @@ enum item_types { stick, tape, end }
 		 "texture_big": "res://images/items/big/Klapek.png",
 		 "texture_build": "res://images",
 		 "type": item_types.end,
-		 "length": 1,
+		 "length": 2,
 		 "durability": 4
 	},
 	"ruler": {
