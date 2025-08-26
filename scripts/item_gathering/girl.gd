@@ -3,7 +3,7 @@ signal destroy_item(id)
 signal show_item_name(id)
 signal hide_item_name()
 
-const SPEED = 100
+const SPEED = 80
 @onready var table: StaticBody2D = $"../Table"
 @onready var area_2d: Area2D = $Area2D
 @onready var label_desc: Label = $"../HUDSearchItems/Label"
@@ -18,19 +18,20 @@ var is_near_table = false
 
 func _physics_process(_delta: float) -> void:
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	if(input_direction[0] > 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_right")
-		dir = DIRECTION.right
-	if(input_direction[0] < 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_left")
-		dir = DIRECTION.left
-	if(input_direction[1] > 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_front")
-		dir = DIRECTION.front
-	if(input_direction[1] < 0 and character_body_2d.velocity != Vector2.ZERO):
-		play("walk_back")
-		dir = DIRECTION.back
-	if character_body_2d.velocity == Vector2.ZERO:
+	if character_body_2d.velocity != Vector2.ZERO:
+		if input_direction[1] > 0:
+			play("walk_front")
+			dir = DIRECTION.front
+		elif input_direction[1] < 0:
+			play("walk_back")
+			dir = DIRECTION.back
+		elif input_direction[0] > 0:
+			play("walk_right")
+			dir = DIRECTION.right
+		elif input_direction[0] < 0:
+			play("walk_left")
+			dir = DIRECTION.left
+	else:
 		match dir:
 			DIRECTION.right:
 				play("idle_right")
