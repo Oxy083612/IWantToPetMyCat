@@ -3,7 +3,7 @@ signal destroy_item(id)
 signal show_item_name(id)
 signal hide_item_name()
 
-const SPEED = 80
+const SPEED = 120
 @onready var table: StaticBody2D = $"../Table"
 @onready var area_2d: Area2D = $Area2D
 @onready var label_desc: Label = $"../HUDSearchItems/Label"
