@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://pc0tu2if1i0f"]
+[gd_scene load_steps=13 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/hand_building/building_scene.gd" id="1_k4vdf"]
 [ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/hand_building/tape_counter.gd" id="2_vmvnh"]
@@ -6,10 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://uhkexvwenae1" path="res://images/hud/Empty_Pasek_Biay.png" id="4_rpvnu"]
 [ext_resource type="Texture2D" uid="uid://bqo5xqe42fy3e" path="res://images/hud/Full_Pasek_Czerwony.png" id="5_m46la"]
 [ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="6_y8toh"]
-[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="7_2kv8c"]
-[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="8_q8bcx"]
-[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="9_fp4ul"]
 [ext_resource type="Texture2D" uid="uid://sqkevbgbl2k4" path="res://images/backgrounds/stol.png" id="10_yij7t"]
+[ext_resource type="Texture2D" uid="uid://bkc87e72e52yy" path="res://images/hud/pusty.png" id="11_m46la"]
+[ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="12_y8toh"]
+[ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="13_2kv8c"]
+[ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="14_q8bcx"]
 
 [sub_resource type="GDScript" id="GDScript_mrgcu"]
 script/source = "extends TextureButton
@@ -136,12 +137,22 @@ horizontal_alignment = 1
 [node name="Button" type="TextureButton" parent="."]
 offset_left = 1591.0
 offset_top = 422.0
-offset_right = 1899.0
-offset_bottom = 529.0
-texture_normal = ExtResource("7_2kv8c")
-texture_pressed = ExtResource("8_q8bcx")
-texture_hover = ExtResource("9_fp4ul")
+offset_right = 1891.0
+offset_bottom = 522.0
+texture_normal = ExtResource("11_m46la")
+texture_pressed = ExtResource("12_y8toh")
+texture_hover = ExtResource("13_2kv8c")
 script = SubResource("GDScript_mrgcu")
+
+[node name="Label" type="Label" parent="Button"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 26.0
+offset_right = 196.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("14_q8bcx")
+theme_override_font_sizes/font_size = 36
+text = "FINISH"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -10
@@ -149,13 +160,25 @@ position = Vector2(960, 540)
 scale = Vector2(8.20513, 8.18182)
 texture = ExtResource("10_yij7t")
 
-[node name="Undo" type="Button" parent="."]
-offset_left = 1730.0
-offset_top = 241.0
-offset_right = 1841.0
-offset_bottom = 332.0
-theme_override_font_sizes/font_size = 60
-text = "<=="
+[node name="Undo" type="TextureButton" parent="."]
+offset_left = 1594.0
+offset_top = 257.0
+offset_right = 1894.0
+offset_bottom = 357.0
+texture_normal = ExtResource("11_m46la")
+texture_pressed = ExtResource("12_y8toh")
+texture_hover = ExtResource("13_2kv8c")
+
+[node name="Label" type="Label" parent="Undo"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 26.0
+offset_right = 278.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("14_q8bcx")
+theme_override_font_sizes/font_size = 36
+text = "UNDO ITEM"
+horizontal_alignment = 1
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="button_down" from="Undo" to="." method="_on_undo_button_down"]

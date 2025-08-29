@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://bld3xdv1s1sma"]
+[gd_scene load_steps=20 format=3 uid="uid://bld3xdv1s1sma"]
 
 [ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu/menu.gd" id="1_rrod7"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_faisu"]
@@ -14,12 +14,10 @@
 [ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="11_50dkp"]
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="12_qp2xe"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="13_02wpe"]
-[ext_resource type="Texture2D" uid="uid://cxxawyl1enckt" path="res://images/hud/start.png" id="14_t7gsn"]
-[ext_resource type="Texture2D" uid="uid://bj5yvj1dcnh20" path="res://images/hud/start_clic.png" id="15_4xbh2"]
-[ext_resource type="Texture2D" uid="uid://1cs16mu8knpq" path="res://images/hud/start_hover.png" id="16_gxxro"]
-[ext_resource type="Texture2D" uid="uid://tbk3r7411vmf" path="res://images/hud/exit.png" id="17_2rjk0"]
-[ext_resource type="Texture2D" uid="uid://b65ama4la64fv" path="res://images/hud/exit_clic.png" id="18_fqr1d"]
-[ext_resource type="Texture2D" uid="uid://ddkoowrn3jvsc" path="res://images/hud/exit_hover.png" id="19_fstgh"]
+[ext_resource type="Texture2D" uid="uid://bkc87e72e52yy" path="res://images/hud/pusty.png" id="15_55a8x"]
+[ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="16_rrod7"]
+[ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="17_faisu"]
+[ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="18_t2e6u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_vhsb5"]
 animations = [{
@@ -99,12 +97,22 @@ anchor_bottom = 0.5
 offset_left = -760.0
 offset_top = 30.0
 offset_right = -460.0
-offset_bottom = 167.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("14_t7gsn")
-texture_pressed = ExtResource("15_4xbh2")
-texture_hover = ExtResource("16_gxxro")
+texture_normal = ExtResource("15_55a8x")
+texture_pressed = ExtResource("16_rrod7")
+texture_hover = ExtResource("17_faisu")
+
+[node name="Label" type="Label" parent="Play"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 26.0
+offset_right = 209.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("18_t2e6u")
+theme_override_font_sizes/font_size = 36
+text = "START"
 
 [node name="Exit" type="TextureButton" parent="."]
 layout_mode = 1
@@ -116,12 +124,22 @@ anchor_bottom = 0.5
 offset_left = -280.0
 offset_top = 30.0
 offset_right = 20.0
-offset_bottom = 167.0
+offset_bottom = 130.0
 grow_horizontal = 2
 grow_vertical = 2
-texture_normal = ExtResource("17_2rjk0")
-texture_pressed = ExtResource("18_fqr1d")
-texture_hover = ExtResource("19_fstgh")
+texture_normal = ExtResource("15_55a8x")
+texture_pressed = ExtResource("16_rrod7")
+texture_hover = ExtResource("17_faisu")
+
+[node name="Label" type="Label" parent="Exit"]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 26.0
+offset_right = 185.0
+offset_bottom = 71.0
+theme_override_fonts/font = ExtResource("18_t2e6u")
+theme_override_font_sizes/font_size = 36
+text = "EXIT"
 
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

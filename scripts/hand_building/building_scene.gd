@@ -9,7 +9,7 @@ extends Node2D
 @onready var length_bar: TextureProgressBar = $Length/LengthBar/TextureProgressBar
 @onready var durability_bar: TextureProgressBar = $Durability/DurabilityBar/TextureProgressBar
 @onready var items: Node = $Items
-@onready var undo_button: Button = $Undo
+@onready var undo_button: TextureButton = $Undo
 
 
 @onready var item_level = 0
