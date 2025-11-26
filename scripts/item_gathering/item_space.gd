@@ -25,4 +25,4 @@ func _on_item_show(id):
 		return
 	if(self.get_instance_id() != id):
 		return
-	label_desc.text = item_name
+	label_desc.text = "pick up " + item_name

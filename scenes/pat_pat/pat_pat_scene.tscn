@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=18 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat/pat_pat_scene.gd" id="1_xkuku"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_qgess"]
@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_etgun"]
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
-[ext_resource type="Texture2D" uid="uid://cqog6q7w2nvqe" path="res://images/hud/dymek.png" id="13_vveds"]
+[ext_resource type="AudioStream" uid="uid://sov4j01vxe81" path="res://audio/cat_purractive_loop.wav" id="13_b2pyc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -52,14 +52,19 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Animation" id="Animation_b2pyc"]
-resource_name = "finish"
-length = 10.0
+[sub_resource type="Gradient" id="Gradient_2wknw"]
+interpolation_mode = 1
+offsets = PackedFloat32Array(0.0389611, 0.896104, 0.948052, 0.954545, 0.961039, 0.967532, 0.974026, 0.980519, 0.987013, 0.993506, 1)
+colors = PackedColorArray(0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 1, 1, 1, 0)
 
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_hcqg7"]
-_data = {
-&"finish": SubResource("Animation_b2pyc")
-}
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_b2pyc"]
+gradient = SubResource("Gradient_2wknw")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2wknw"]
+radius = 31.259
 
 [node name="PatPatScene" type="Node2D"]
 z_index = -1
@@ -76,78 +81,22 @@ scale = Vector2(8.2, 8.2)
 sprite_frames = SubResource("SpriteFrames_b64y2")
 animation = &"Cat doing cat stuff"
 autoplay = "Cat doing cat stuff"
+frame_progress = 0.766956
 
-[node name="Cat anger" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1354, 317)
-scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vveds")
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1679, 580)
+scale = Vector2(8, 8)
+texture = SubResource("GradientTexture2D_b2pyc")
 
-[node name="anger" type="Label" parent="Cat anger"]
-offset_left = -215.073
-offset_top = -121.791
-offset_right = 185.927
-offset_bottom = 49.209
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "You want to pat me with THIS?!"
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="Area2D" type="Area2D" parent="Sprite2D"]
 
-[node name="Cat happy" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1354, 317)
-scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vveds")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
+shape = SubResource("CircleShape2D_2wknw")
 
-[node name="happy" type="Label" parent="Cat happy"]
-offset_left = -194.711
-offset_top = -97.4328
-offset_right = 206.289
-offset_bottom = 73.5672
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Purrrr :3"
-horizontal_alignment = 1
-autowrap_mode = 2
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("13_b2pyc")
+bus = &"SFX"
 
-[node name="Not long enough" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(222, 227)
-scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vveds")
-flip_h = true
-
-[node name="long" type="Label" parent="Not long enough"]
-offset_left = -188.348
-offset_top = -121.791
-offset_right = 212.652
-offset_bottom = 49.209
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Eh, it's not long enough"
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="Awwww" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(222, 227)
-scale = Vector2(0.785781, 0.656863)
-texture = ExtResource("13_vveds")
-flip_h = true
-
-[node name="aw" type="Label" parent="Awwww"]
-offset_left = -190.893
-offset_top = -108.09
-offset_right = 210.107
-offset_bottom = 62.9104
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 40
-text = "Awwwww..."
-horizontal_alignment = 1
-autowrap_mode = 2
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-libraries = {
-&"": SubResource("AnimationLibrary_hcqg7")
-}
+[connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
+[connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
+[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
