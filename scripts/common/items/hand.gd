@@ -11,8 +11,8 @@ var current_items = []
 @onready var item_length_2: PackedScene = preload("res://scenes/hand_building/item_length_2.tscn")
 @onready var item_slot: PackedScene = preload("res://scenes/hand_building/buildable_item.tscn")
 
-var lastPosition
-var targetPosition
+@onready var lastPosition
+@onready var targetPosition
 
 func _ready():
 	Hand.global_position = Vector2(250, 400)

@@ -75,6 +75,7 @@ func _input(event):
 	if not event.is_action_pressed("pick_up"):
 		return
 	if item_held == null and len(pickable_bodies) > 0:
+		print(pickable_bodies)
 		item_held = pickable_bodies[-1].item_name
 		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())

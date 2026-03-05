@@ -20,14 +20,14 @@ func _on_area_2d_mouse_entered() -> void:
 func _on_area_2d_mouse_exited() -> void:
 	mouse_in_circle = false
 
-func can_purr(current_mouse_position: Vector2) -> bool:
+func can_be_petted(current_mouse_position: Vector2) -> bool:
 	if current_mouse_position.distance_to(last_mouse_position) < 1:
 		return false
 	return mouse_pressed and mouse_in_circle
 
 func _physics_process(delta: float) -> void:
 	var current_mouse_position = get_viewport().get_mouse_position()
-	if can_purr(current_mouse_position):
+	if can_be_petted(current_mouse_position):
 		if not purring:
 			purring = true
 			purr_stream.play()
