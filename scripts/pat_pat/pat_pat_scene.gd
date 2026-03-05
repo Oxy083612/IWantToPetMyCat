@@ -29,6 +29,11 @@ func _physics_process(delta: float) -> void:
 	var current_mouse_position = get_viewport().get_mouse_position()
 	if can_be_petted(current_mouse_position):
 		if not purring:
+			print("meow")
+			print("mouse", current_mouse_position)
+			print("target", Hand.targetPosition)
+			print("last", Hand.lastPosition)
+
 			purring = true
 			purr_stream.play()
 	else:

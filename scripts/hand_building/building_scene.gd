@@ -16,8 +16,6 @@ extends Node2D
 @onready var last_item = null
 @onready var MAX_ITEM_LEVEL = 2
 @onready var MAX_LENGTH = Hand.MAX_LENGTH
-@onready var lastPosition = Hand.global_position
-@onready var targetPosition = Hand.global_position
 
 
 var not_empty_slots = 0
@@ -68,7 +66,7 @@ func add_item_to_hand(item_name, item_big):
 
 func connect_item_using_tape(item_big, sprite_tape, item_ID, item_name):
 	add_item_to_hand(item_name, item_big)
-	item_big.global_position = targetPosition
+	item_big.global_position = Hand.targetPosition
 	var direction = 0
 	if item_level == 2:
 		direction = -1
@@ -78,10 +76,10 @@ func connect_item_using_tape(item_big, sprite_tape, item_ID, item_name):
 		direction = randi_range(0, 1) * 2 - 1
 	item_level += direction
 	if direction == -1:
-		targetPosition = item_big.get_node("left").global_position
+		Hand.targetPosition = item_big.get_node("left").global_position
 	else:
-		targetPosition = item_big.get_node("right").global_position
-	var start = lastPosition
+		Hand.targetPosition = item_big.get_node("right").global_position
+	var start = Hand.lastPosition
 	var end = item_big.global_position
 	sprite_tape.global_position = (start + end) / 2.0
 	last_item = item_ID
@@ -89,9 +87,9 @@ func connect_item_using_tape(item_big, sprite_tape, item_ID, item_name):
 
 func connect_end_using_tape(item_big, sprite_tape, item_ID, item_name):
 	add_item_to_hand(item_name, item_big)
-	item_big.global_position = lastPosition
-	targetPosition = item_big.get_node("right").global_position
-	var start = lastPosition
+	item_big.global_position = Hand.lastPosition
+	Hand.targetPosition = item_big.get_node("right").global_position
+	var start = Hand.lastPosition
 	var end = item_big.global_position
 	sprite_tape.global_position = (start + end) / 2.0
 	last_item = item_ID
@@ -117,11 +115,9 @@ func _on_item_slot_pressed(item_name, item_ID):
 	if Hand.get_child_count() == 0 or Equipment._return_type(Hand.get_child(Hand.get_child_count() - 1)._name) != 2:
 		if Hand.get_child_count() > 0:
 			var last_item_node = Hand.get_child(Hand.get_child_count() - 1)
-			lastPosition = last_item_node.get_node("left").global_position
-			print(lastPosition)
+			Hand.lastPosition = last_item_node.get_node("left").global_position
 		else:
-			lastPosition = Hand.global_position
-			print(lastPosition)			
+			Hand.lastPosition = Hand.global_position
 		item_big = create_item(item_name, item_ID, false)
 		if Hand.length != 0:
 			add_tape(sprite_tape, item_big)
@@ -129,9 +125,9 @@ func _on_item_slot_pressed(item_name, item_ID):
 	elif Equipment._return_type(item_name) == 1 and Hand.length + Equipment._return_length(item_name) <= MAX_LENGTH:
 		if Hand.get_child_count() > 0:
 			var last_item_node = Hand.get_child(Hand.get_child_count() - 1)
-			lastPosition = last_item_node.get_node("right").global_position
+			Hand.lastPosition = last_item_node.get_node("right").global_position
 		else:
-			lastPosition = Hand.global_position
+			Hand.lastPosition = Hand.global_position
 		item_big = create_item(item_name, item_ID, true)
 		if Hand.length != 0:
 			add_tape(sprite_tape, item_big)
@@ -163,8 +159,8 @@ func _on_undo_button_down() -> void:
 				Hand.length = 0
 				Hand.durability = 0
 				Hand.real_durability = 0
-				lastPosition = Hand.position
-				targetPosition = Hand.position
+				Hand.lastPosition = Hand.position
+				Hand.targetPosition = Hand.position
 			else:
 				Hand.length -= Equipment._return_length(y.item_name)
 				Hand.durability -= Equipment._return_durability(y.item_name)
@@ -172,9 +168,9 @@ func _on_undo_button_down() -> void:
 			show_hand_stats()
 			var rng = randi_range(0, 1)
 			if next_last_node != null:
-				targetPosition = next_last_node.get_node("left").global_position
+				Hand.targetPosition = next_last_node.get_node("left").global_position
 			else:
-				targetPosition = Hand.global_position
+				Hand.targetPosition = Hand.global_position
 			Equipment.tapes += 1
 			if item_level > 0:
 				item_level -= 1
