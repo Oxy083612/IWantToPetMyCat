@@ -5,7 +5,7 @@ extends Node2D
 @onready var last_mouse_position = Vector2(0, 0)
 @onready var purr_stream = $AudioStreamPlayer2D
 @onready var purring = false
-@onready var cat_position = $Sprite2D.global_position - Vector2(0, 50)
+@onready var cat_position = $Sprite2D.global_position
 @onready var cat_radius = $Sprite2D/Area2D/CollisionShape2D.shape.radius * 5
 @onready var hand_angle = 330.0
 @onready var hand_default = Hand.global_position
