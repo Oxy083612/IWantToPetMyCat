@@ -6,8 +6,6 @@ extends Node2D
 @onready var label: Label = $TapeCounter/Label
 @onready var length_label: Label = $Length/LengthLabel
 @onready var durability_label: Label = $Durability/DurabilityLabel
-@onready var length_bar: TextureProgressBar = $Length/LengthBar/TextureProgressBar
-@onready var durability_bar: TextureProgressBar = $Durability/DurabilityBar/TextureProgressBar
 @onready var items: Node = $Items
 @onready var undo_button: TextureButton = $Undo
 
@@ -45,12 +43,8 @@ func add_tape(sprite_tape, item_big):
 
 
 func show_hand_stats():
-	length_label.text = "Length\n" + str(Hand.length) + "/" + str(GameLoop.min_length)
-	durability_label.text = ("Durability\n" + str(Hand.real_durability) + "/"
-								+ str(GameLoop.min_durability))
-	length_bar.value = min(Hand.length, GameLoop.min_length) * 100 / GameLoop.min_length
-	durability_bar.value = (min(Hand.real_durability, GameLoop.min_durability)
-								* 100 / GameLoop.min_durability)
+	length_label.text = "Length: " + str(Hand.length)
+	durability_label.text = "Durability: " + str(Hand.durability)
 
 
 func add_item_to_hand(item_name, item_big):
@@ -60,7 +54,6 @@ func add_item_to_hand(item_name, item_big):
 	item_big.get_node("Sprite2D").texture = load(Equipment._return_texture_big_name(item_name))
 	item_big.get_node("Sprite2D").z_index = 5
 	Hand.durability += Equipment._return_durability(item_name)
-	Hand.real_durability = Hand.durability / len(Hand.current_items)
 	show_hand_stats()
 
 
@@ -158,13 +151,11 @@ func _on_undo_button_down() -> void:
 			if Hand.current_items == []:
 				Hand.length = 0
 				Hand.durability = 0
-				Hand.real_durability = 0
 				Hand.lastPosition = Hand.position
 				Hand.targetPosition = Hand.position
 			else:
 				Hand.length -= Equipment._return_length(y.item_name)
 				Hand.durability -= Equipment._return_durability(y.item_name)
-				Hand.real_durability = Hand.durability / len(Hand.current_items)
 			show_hand_stats()
 			var rng = randi_range(0, 1)
 			if next_last_node != null:

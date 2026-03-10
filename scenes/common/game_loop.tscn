@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://cer8kbpx57d6c"]
+[gd_scene load_steps=2 format=3 uid="uid://daub30ddvj4ou"]
 
-[ext_resource type="Script" uid="uid://cbg7lw2svabio" path="res://scripts/common/game_loop.gd" id="1_qco2a"]
+[sub_resource type="GDScript" id="GDScript_ngvn2"]
+script/source = "extends Node
+
+var current_wins = 0
+"
 
 [node name="GameLoop" type="Node"]
-script = ExtResource("1_qco2a")
+script = SubResource("GDScript_ngvn2")

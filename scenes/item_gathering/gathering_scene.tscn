@@ -100,7 +100,7 @@ size = Vector2(21, 16)
 size = Vector2(119, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0ppmw"]
-size = Vector2(87.2366, 32.1018)
+size = Vector2(85.0657, 33.3509)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgplo"]
 size = Vector2(126, 51)
@@ -301,7 +301,7 @@ z_index = 0
 position = Vector2(276, 340)
 
 [node name="Player" parent="." instance=ExtResource("3_4uyn0")]
-position = Vector2(129, 243)
+position = Vector2(10, -16)
 scale = Vector2(1.6, 1.6)
 animation = &"walk_right"
 
@@ -525,8 +525,8 @@ position = Vector2(558.5, 386)
 shape = SubResource("RectangleShape2D_jbdij")
 
 [node name="CollisionShape2D28" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(521.534, 278.128)
-rotation = -0.0872665
+position = Vector2(520.764, 281.028)
+rotation = -0.111079
 shape = SubResource("RectangleShape2D_0ppmw")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Collisions"]

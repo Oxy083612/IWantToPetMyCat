@@ -2,7 +2,6 @@ extends Node2D
 
 var length = 0
 var durability = 0
-var real_durability = 0
 var current_length = 0
 var current_items = []
 @onready var MAX_LENGTH = 12

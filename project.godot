@@ -20,7 +20,6 @@ config/icon="res://icon.svg"
 ItemsPool="*res://scenes/common/items/items_pool.tscn"
 Equipment="*res://scenes/common/items/equipment.tscn"
 Hand="*res://scenes/common/items/hand.tscn"
-GameLoop="*res://scenes/common/game_loop.tscn"
 Music="*res://scenes/common/music.tscn"
 
 [display]
