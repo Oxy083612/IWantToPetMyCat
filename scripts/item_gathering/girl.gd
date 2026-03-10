@@ -48,7 +48,7 @@ func _physics_process(_delta: float) -> void:
 	character_body_2d.position = Vector2.ZERO
 
 func _on_area_2d_body_entered(body) -> void:
-	if body != table:
+	if body != table and body.item_name != null:
 		pickable_bodies.append(body)
 		if not item_held:
 			emit_signal("show_item_name", body.get_instance_id())
@@ -75,7 +75,6 @@ func _input(event):
 	if not event.is_action_pressed("pick_up"):
 		return
 	if item_held == null and len(pickable_bodies) > 0:
-		print(pickable_bodies)
 		item_held = pickable_bodies[-1].item_name
 		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())

@@ -5,7 +5,16 @@ extends Node2D
 @onready var last_mouse_position = Vector2(0, 0)
 @onready var purr_stream = $AudioStreamPlayer2D
 @onready var purring = false
+@onready var cat = $Sprite2D
+@onready var hand_angle = 315
 
+func _ready() -> void:
+	var cat_position = cat.global_position
+	var hand_length = Hand.targetPosition - Hand.global_position
+	var length_vector = Vector2(hand_length.x, 0)
+	length_vector = length_vector.rotated(deg_to_rad(hand_angle))
+	Hand.global_rotation = deg_to_rad(hand_angle)
+	Hand.global_position = cat_position - length_vector
 
 func _input(event) -> void:
 	if event is not InputEventMouseButton:
@@ -33,7 +42,7 @@ func _physics_process(delta: float) -> void:
 			print("mouse", current_mouse_position)
 			print("target", Hand.targetPosition)
 			print("last", Hand.lastPosition)
-
+			print("global", Hand.global_position)
 			purring = true
 			purr_stream.play()
 	else:
