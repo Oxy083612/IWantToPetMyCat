@@ -21,6 +21,9 @@ func _return_durability(item: String):
 func _return_length(item: String):
 	return ItemsPool.items[item].get("length")
 
+func _return_quality(item: String):
+	return ItemsPool.items[item].get("quality")
+
 func _return_type(item: String):
 	return ItemsPool.items[item].get("type")
 	

@@ -6,6 +6,7 @@ extends Node2D
 @onready var label: Label = $TapeCounter/Label
 @onready var length_label: Label = $Length/LengthLabel
 @onready var durability_label: Label = $Durability/DurabilityLabel
+@onready var quality_label: Label = $Quality/QualityLabel
 @onready var items: Node = $Items
 @onready var undo_button: TextureButton = $Undo
 
@@ -23,7 +24,6 @@ func _ready():
 		var new_item = item_slot.instantiate()
 		new_item.set_item(item, i)
 		new_item.global_position = Vector2(randi_range(200, 1720), randi_range(799, 800))
-		#print(new_item.global_position)
 		items.add_child(new_item)
 		new_item.item_slot_pressed.connect(_on_item_slot_pressed)
 		i += 1
@@ -45,6 +45,7 @@ func add_tape(sprite_tape, item_big):
 func show_hand_stats():
 	length_label.text = "Length: " + str(Hand.length)
 	durability_label.text = "Durability: " + str(Hand.durability)
+	quality_label.text = "Quality: " + str(Hand.quality)
 
 
 func add_item_to_hand(item_name, item_big):
@@ -54,6 +55,7 @@ func add_item_to_hand(item_name, item_big):
 	item_big.get_node("Sprite2D").texture = load(Equipment._return_texture_big_name(item_name))
 	item_big.get_node("Sprite2D").z_index = 5
 	Hand.durability += Equipment._return_durability(item_name)
+	Hand.quality += Equipment._return_quality(item_name)
 	show_hand_stats()
 
 
@@ -151,11 +153,13 @@ func _on_undo_button_down() -> void:
 			if Hand.current_items == []:
 				Hand.length = 0
 				Hand.durability = 0
+				Hand.quality = 0
 				Hand.lastPosition = Hand.position
 				Hand.targetPosition = Hand.position
 			else:
 				Hand.length -= Equipment._return_length(y.item_name)
 				Hand.durability -= Equipment._return_durability(y.item_name)
+				Hand.quality -= Equipment._return_quality(y.item_name)
 			show_hand_stats()
 			var rng = randi_range(0, 1)
 			if next_last_node != null:

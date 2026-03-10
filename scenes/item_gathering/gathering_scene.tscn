@@ -25,7 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://8od55wc1dycj" path="res://scenes/item_gathering/table.tscn" id="23_xtwq8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_du432"]
-size = Vector2(83, 40.5)
+size = Vector2(91, 40.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7pitd"]
 size = Vector2(297, 140.75)
@@ -103,7 +103,7 @@ size = Vector2(119, 16)
 size = Vector2(85.0657, 33.3509)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pgplo"]
-size = Vector2(126, 51)
+size = Vector2(107, 51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ntbmh"]
 size = Vector2(52, 38)
@@ -418,7 +418,7 @@ texture = ExtResource("22_hfgiu")
 [node name="Collisions" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D18" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(413.5, 193.75)
+position = Vector2(417.5, 193.75)
 shape = SubResource("RectangleShape2D_du432")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="Collisions"]
@@ -530,7 +530,7 @@ rotation = -0.111079
 shape = SubResource("RectangleShape2D_0ppmw")
 
 [node name="CollisionShape2D29" type="CollisionShape2D" parent="Collisions"]
-position = Vector2(505, 217.5)
+position = Vector2(514.5, 217.5)
 shape = SubResource("RectangleShape2D_pgplo")
 
 [node name="CollisionShape2D30" type="CollisionShape2D" parent="Collisions"]

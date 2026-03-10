@@ -10,16 +10,18 @@ enum item_types { stick, tape, end }
 		"texture_build": "res://images",
 		"type": item_types.stick,
 		"length": 2,
-		"durability": 3
+		"durability": 3,
+		"quality": 1
 		},
 	"baguette": {
 		"name": "baguette",
-		 "texture": "res://images/items/small/Item-1.png",
-		 "texture_big": "res://images/items/big/Biegietka.png",
-		 "texture_build": "res://images",
-		 "type": item_types.stick,
-		 "length": 2,
-		 "durability": 2
+		"texture": "res://images/items/small/Item-1.png",
+		"texture_big": "res://images/items/big/Biegietka.png",
+		"texture_build": "res://images",
+		"type": item_types.stick,
+		"length": 2,
+		"durability": 2,
+		"quality": 2
 		},
 	"glue": {
 		"name": "glue",
@@ -37,21 +39,23 @@ enum item_types { stick, tape, end }
 		},
 	"remote": {
 		"name": "remote",
-		 "texture": "res://images/items/small/Item-7.png",
-		 "texture_big": "res://images/items/big/Pilot.png",
-		 "texture_build": "res://images",
-		 "type": item_types.stick,
-		 "length": 1,
-		 "durability": 4
+		"texture": "res://images/items/small/Item-7.png",
+		"texture_big": "res://images/items/big/Pilot.png",
+		"texture_build": "res://images",
+		"type": item_types.stick,
+		"length": 1,
+		"durability": 3,
+		"quality": 2
 	},
 	"slipper": {
 		"name": "slipper",
-		 "texture": "res://images/items/small/Item-13.png",
-		 "texture_big": "res://images/items/big/Klapek.png",
-		 "texture_build": "res://images",
-		 "type": item_types.end,
-		 "length": 2,
-		 "durability": 4
+		"texture": "res://images/items/small/Item-13.png",
+		"texture_big": "res://images/items/big/Klapek.png",
+		"texture_build": "res://images",
+		"type": item_types.end,
+		"length": 2,
+		"durability": 4,
+		"quality": 3
 	},
 	"ruler": {
 		"name": "ruler",
@@ -60,7 +64,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.stick,
 		 "length": 1,
-		 "durability": 1
+		 "durability": 1,
+		"quality": 1
 	},
 	"whisk": {
 		"name": "whisk",
@@ -69,7 +74,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.end,
 		 "length": 2,
-		 "durability": 2
+		 "durability": 2,
+		"quality": 2
 	},
 	"pillow": {
 		"name": "pillow",
@@ -78,7 +84,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.stick,
 		 "length": 1,
-		 "durability": 3
+		 "durability": 3,
+		"quality": 3
 	},
 	"newspaper": {
 		"name": "newspaper",
@@ -87,7 +94,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.stick,
 		 "length": 2,
-		 "durability": 1
+		 "durability": 1,
+		"quality": 2
 	},
 	"toilet brush": {
 		"name": "toilet brush",
@@ -96,7 +104,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.end,
 		 "length": 2,
-		 "durability": 2
+		 "durability": 2,
+		"quality": -1
 	},
 }
 
