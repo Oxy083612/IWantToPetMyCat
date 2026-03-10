@@ -301,8 +301,9 @@ z_index = 0
 position = Vector2(276, 340)
 
 [node name="Player" parent="." instance=ExtResource("3_4uyn0")]
-position = Vector2(271, 219)
+position = Vector2(129, 243)
 scale = Vector2(1.6, 1.6)
+animation = &"walk_right"
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-1.52588e-05, -0.625)
