@@ -10,8 +10,8 @@ enum item_types { stick, tape, end }
 		"texture_build": "res://images",
 		"type": item_types.stick,
 		"length": 2,
-		"durability": 3,
-		"quality": 1
+		"durability": 4,
+		"quality": 2
 		},
 	"baguette": {
 		"name": "baguette",
@@ -20,8 +20,8 @@ enum item_types { stick, tape, end }
 		"texture_build": "res://images",
 		"type": item_types.stick,
 		"length": 2,
-		"durability": 2,
-		"quality": 2
+		"durability": 1,
+		"quality": 3
 		},
 	"glue": {
 		"name": "glue",
@@ -44,8 +44,8 @@ enum item_types { stick, tape, end }
 		"texture_build": "res://images",
 		"type": item_types.stick,
 		"length": 1,
-		"durability": 3,
-		"quality": 2
+		"durability": 5,
+		"quality": 1
 	},
 	"slipper": {
 		"name": "slipper",
@@ -54,8 +54,8 @@ enum item_types { stick, tape, end }
 		"texture_build": "res://images",
 		"type": item_types.end,
 		"length": 2,
-		"durability": 4,
-		"quality": 3
+		"durability": 6,
+		"quality": 4
 	},
 	"ruler": {
 		"name": "ruler",
@@ -64,7 +64,7 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.stick,
 		 "length": 1,
-		 "durability": 1,
+		 "durability": 2,
 		"quality": 1
 	},
 	"whisk": {
@@ -74,8 +74,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.end,
 		 "length": 2,
-		 "durability": 2,
-		"quality": 2
+		 "durability": 3,
+		"quality": 6
 	},
 	"pillow": {
 		"name": "pillow",
@@ -84,8 +84,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.stick,
 		 "length": 1,
-		 "durability": 3,
-		"quality": 3
+		 "durability": 4,
+		"quality": 5
 	},
 	"newspaper": {
 		"name": "newspaper",
@@ -104,8 +104,8 @@ enum item_types { stick, tape, end }
 		 "texture_build": "res://images",
 		 "type": item_types.end,
 		 "length": 2,
-		 "durability": 2,
-		"quality": -1
+		 "durability": 5,
+		"quality": -10
 	},
 }
 

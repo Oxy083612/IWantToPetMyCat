@@ -102,7 +102,7 @@ scale = Vector2(4.5, 4.5)
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="Bar"]
 layout_mode = 2
-step = 0.01
+step = 0.0
 texture_under = ExtResource("14_e2wja")
 texture_progress = ExtResource("15_xkuku")
 

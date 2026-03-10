@@ -55,8 +55,11 @@ func _physics_process(delta: float) -> void:
 		var y_increment = cat_radius * sin(current_angle)
 		var increment = Vector2(x_increment, y_increment)
 		Hand.global_position = hand_default + increment
-		bar.value += 0.2
-		points += 1
+		var durability_factor = 0
+		if Hand.durability !=  0:
+			durability_factor = pow(Hand.length, 1.5) / float(Hand.durability * 6)
+		bar.value += durability_factor
+		points += Hand.quality
 		points_label.text = "Points: " + str(points)
 		if not purring:
 			purring = true
