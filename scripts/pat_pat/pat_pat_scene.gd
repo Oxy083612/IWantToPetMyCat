@@ -11,7 +11,9 @@ extends Node2D
 @onready var hand_default = Hand.global_position
 @onready var angle_speed = 2.0
 @onready var current_angle = 0.0
-
+@onready var bar = $Bar/TextureProgressBar
+@onready var points_label = $Label
+@onready var points = 0
 
 func _ready() -> void:
 	var hand_length = Hand.targetPosition - Hand.global_position
@@ -41,6 +43,8 @@ func _on_area_2d_mouse_exited() -> void:
 func can_be_petted(current_mouse_position: Vector2) -> bool:
 	if current_mouse_position.distance_to(last_mouse_position) < 1:
 		return false
+	if bar.value >= 100:
+		return false
 	return mouse_pressed and mouse_in_circle
 
 func _physics_process(delta: float) -> void:
@@ -51,6 +55,9 @@ func _physics_process(delta: float) -> void:
 		var y_increment = cat_radius * sin(current_angle)
 		var increment = Vector2(x_increment, y_increment)
 		Hand.global_position = hand_default + increment
+		bar.value += 0.2
+		points += 1
+		points_label.text = "Points: " + str(points)
 		if not purring:
 			purring = true
 			purr_stream.play()
