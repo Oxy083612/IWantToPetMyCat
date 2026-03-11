@@ -166,7 +166,8 @@ func _on_undo_button_down() -> void:
 				Hand.targetPosition = next_last_node.get_node("left").global_position
 			else:
 				Hand.targetPosition = Hand.global_position
-			Equipment.tapes += 1
+			if Hand.length > 0:
+				Equipment.tapes += 1
 			if item_level > 0:
 				item_level -= 1
 			elif item_level < 0:
