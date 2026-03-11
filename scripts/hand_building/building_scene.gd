@@ -103,7 +103,7 @@ func create_item(item_name, item_ID, is_end):
 	
 
 func _on_item_slot_pressed(item_name, item_ID):
-	if Equipment.tapes <= 0 and Hand.length > 0:
+	if Equipment.tapes == 0 and Hand.length > 0:
 		return
 	var item_big
 	var sprite_tape = Sprite2D.new()

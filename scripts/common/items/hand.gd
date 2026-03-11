@@ -1,10 +1,10 @@
 extends Node2D
 
-var length = 0
-var durability = 0
-var quality = 0
-var current_length = 0
-var current_items = []
+@onready var length = 0
+@onready var durability = 0
+@onready var quality = 0
+@onready var current_length = 0
+@onready var current_items = []
 @onready var MAX_LENGTH = 12
 
 @onready var item_length_1: PackedScene = preload("res://scenes/hand_building/item_length_1.tscn")

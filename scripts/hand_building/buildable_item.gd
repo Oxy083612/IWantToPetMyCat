@@ -28,7 +28,7 @@ func set_item(new_item, item_ID):
 
 func _on_pressed() -> void:
 	if not is_used and (Hand.get_child_count() == 0 or Equipment._return_type(Hand.get_child(Hand.get_child_count() - 1)._name) != 2):
-		if Equipment.tapes == 0:
+		if Equipment.tapes == 0 and Hand.length > 0:
 			return
 		emit_signal("item_slot_pressed", item_name, item_number)
 		is_used = true
