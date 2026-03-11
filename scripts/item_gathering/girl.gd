@@ -53,9 +53,10 @@ func _on_area_2d_body_entered(body) -> void:
 		if not item_held:
 			emit_signal("show_item_name", body.get_instance_id())
 		return
-	is_near_table = true
-	if item_held:
-		label_desc.text = "put " + item_held + " on the table"
+	if body == table:
+		is_near_table = true
+		if item_held:
+			label_desc.text = "put " + item_held + " on the table"
 		
 func _on_area_2d_body_exited(body) -> void:
 	if body.get_instance_id() == table.get_instance_id():
@@ -70,6 +71,8 @@ func _on_area_2d_body_exited(body) -> void:
 			emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
 			return
 		label_desc.text = ""
+		return
+	label_desc.text = "take " + item_held + " to the table"
 
 func _input(event):
 	if not event.is_action_pressed("pick_up"):

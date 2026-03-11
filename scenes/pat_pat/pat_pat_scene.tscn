@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_etgun"]
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
-[ext_resource type="AudioStream" uid="uid://sov4j01vxe81" path="res://audio/cat_purractive_loop.wav" id="13_b2pyc"]
+[ext_resource type="AudioStream" uid="uid://c5gb550v25evy" path="res://audio/cat_purractive_loop.wav" id="13_b2pyc"]
 [ext_resource type="Texture2D" uid="uid://brisxnvilliwq" path="res://images/hud/Empty_Pasek.png" id="14_e2wja"]
 [ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="15_xkuku"]
 [ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="16_xkuku"]
@@ -84,8 +84,9 @@ scale = Vector2(8, 8)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 shape = SubResource("CircleShape2D_2wknw")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_b2pyc")
+volume_db = 10.0
 bus = &"SFX"
 
 [node name="Bar" type="HBoxContainer" parent="."]
