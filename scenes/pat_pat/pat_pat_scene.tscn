@@ -153,6 +153,21 @@ theme_override_fonts/font = ExtResource("16_xkuku")
 theme_override_font_sizes/font_size = 36
 text = "FINISH"
 
+[node name="Tip" type="BoxContainer" parent="."]
+offset_top = 1000.0
+offset_right = 480.0
+offset_bottom = 1040.0
+scale = Vector2(4, 4)
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="Tip"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("16_xkuku")
+text = "hold click and move your mouse over the cat to pet it"
+horizontal_alignment = 1
+
 [connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_2d_finished"]

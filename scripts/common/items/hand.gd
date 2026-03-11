@@ -5,7 +5,6 @@ extends Node2D
 @onready var quality = 0
 @onready var current_length = 0
 @onready var current_items = []
-@onready var MAX_LENGTH = 12
 
 @onready var item_length_1: PackedScene = preload("res://scenes/hand_building/item_length_1.tscn")
 @onready var item_length_2: PackedScene = preload("res://scenes/hand_building/item_length_2.tscn")

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c2hdx7qoqnpu4"]
+[gd_scene load_steps=4 format=3 uid="uid://c2hdx7qoqnpu4"]
 
 [ext_resource type="Script" uid="uid://bxwssruam3o40" path="res://scripts/cutscene/cutscene.gd" id="1_vayev"]
 [ext_resource type="VideoStream" uid="uid://c0olblffet4uc" path="res://video/story.ogv" id="2_0lphj"]
+[ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="2_52eit"]
 
 [node name="Cutscene" type="Node2D"]
 scale = Vector2(1.03948, 1.07368)
@@ -25,5 +26,16 @@ size_flags_vertical = 4
 stream = ExtResource("2_0lphj")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -325.163
+offset_top = 404.217
+offset_right = 330.837
+offset_bottom = 481.217
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("2_52eit")
+theme_override_font_sizes/font_size = 64
+text = "press any key to skip"
+horizontal_alignment = 1
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

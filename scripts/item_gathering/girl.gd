@@ -72,7 +72,7 @@ func _on_area_2d_body_entered(body) -> void:
 	if body == table:
 		is_near_table = true
 		if item_held:
-			label_desc.text = "put " + item_held + " on the table"
+			label_desc.text = "press e to put " + item_held + " on the table"
 		
 func _on_area_2d_body_exited(body) -> void:
 	if body.get_instance_id() == table.get_instance_id():

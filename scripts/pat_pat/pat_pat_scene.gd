@@ -15,6 +15,7 @@ extends Node2D
 @onready var points_label = $Label
 @onready var finish_button = $Finish
 @onready var petting_finished = false
+@onready var tip = $Tip/Label
 
 func _ready() -> void:
 	Points.points = 0
@@ -55,6 +56,7 @@ func finish_petting():
 	petting_finished = true
 	bar.hide()
 	Hand.hide()
+	tip.hide()
 	finish_button.show()
 
 func _physics_process(delta: float) -> void:
