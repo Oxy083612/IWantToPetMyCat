@@ -624,3 +624,4 @@ shape = SubResource("RectangleShape2D_q5kya")
 light_mask = 1
 position = Vector2(371, 336)
 scale = Vector2(18.439, 31.6133)
+script = null

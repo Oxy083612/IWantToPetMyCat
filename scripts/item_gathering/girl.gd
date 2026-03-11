@@ -9,12 +9,28 @@ const SPEED = 100
 @onready var label_desc: Label = $"../HUDSearchItems/Label"
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
 
+@onready var level = get_parent()
+@onready var top_left = Vector2(353, 283)
+@onready var bottom_right = Vector2(386, 342)
+
 
 enum DIRECTION {front, right, back, left}
 var dir = DIRECTION.front
 @export var item_held = null
 var pickable_bodies = []
 var is_near_table = false
+
+
+func spawn_item(item):
+	var sprite = Sprite2D.new()
+	var item_texture = ItemsPool.items[item]["texture"]
+	sprite.texture = load(item_texture)
+	var x = randf_range(top_left.x, bottom_right.x)
+	var y = randf_range(bottom_right.y, top_left.y)
+	sprite.global_position = Vector2(x, y)
+	sprite.z_index = 100
+	level.add_child(sprite)
+
 
 func _physics_process(_delta: float) -> void:
 	var input_direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -85,6 +101,7 @@ func _input(event):
 		return
 	if item_held != null and is_near_table:
 		Equipment.add_item(item_held)
+		spawn_item(item_held)
 		item_held = null
 		if len(pickable_bodies) > 0:
 			emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
