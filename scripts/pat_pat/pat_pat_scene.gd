@@ -13,9 +13,11 @@ extends Node2D
 @onready var current_angle = 0.0
 @onready var bar = $Bar/TextureProgressBar
 @onready var points_label = $Label
-@onready var points = 0
+@onready var finish_button = $Finish
+@onready var petting_finished = false
 
 func _ready() -> void:
+	Points.points = 0
 	var hand_length = Hand.targetPosition - Hand.global_position
 	var length_vector = Vector2(hand_length.x, 0.0)
 	length_vector = length_vector.rotated(deg_to_rad(hand_angle))
@@ -25,6 +27,8 @@ func _ready() -> void:
 	Hand.global_position = cat_position - length_vector
 	hand_default = Hand.global_position
 	Hand.global_position += Vector2(cat_radius, 0.0)
+	if Hand.length == 0:
+		finish_petting()	
 	
 
 func _input(event) -> void:
@@ -43,9 +47,15 @@ func _on_area_2d_mouse_exited() -> void:
 func can_be_petted(current_mouse_position: Vector2) -> bool:
 	if current_mouse_position.distance_to(last_mouse_position) < 1:
 		return false
-	if bar.value >= 100:
+	if petting_finished:
 		return false
 	return mouse_pressed and mouse_in_circle
+
+func finish_petting():
+	petting_finished = true
+	bar.hide()
+	Hand.hide()
+	finish_button.show()
 
 func _physics_process(delta: float) -> void:
 	var current_mouse_position = get_viewport().get_mouse_position()
@@ -59,11 +69,13 @@ func _physics_process(delta: float) -> void:
 		if Hand.durability !=  0:
 			durability_factor = pow(Hand.length, 1.5) / float(Hand.durability * 6)
 		bar.value += durability_factor
-		points += Hand.quality
-		points_label.text = "Points: " + str(points)
+		Points.points += Hand.quality
+		points_label.text = "Points: " + str(Points.points)
 		if not purring:
 			purring = true
 			purr_stream.play()
+		if bar.value >= 100:
+			finish_petting()
 	else:
 		purring = false
 		purr_stream.stop()
@@ -73,3 +85,7 @@ func _physics_process(delta: float) -> void:
 func _on_audio_stream_player_2d_finished() -> void:
 	if purring:
 		purr_stream.play()
+
+
+func _on_finish_pressed() -> void:
+	get_tree().change_scene_to_file("res://scenes/pat_pat/ending.tscn")

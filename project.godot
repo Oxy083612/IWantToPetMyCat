@@ -21,6 +21,7 @@ ItemsPool="*res://scenes/common/items/items_pool.tscn"
 Equipment="*res://scenes/common/items/equipment.tscn"
 Hand="*res://scenes/common/items/hand.tscn"
 Music="*res://scenes/common/music.tscn"
+Points="*res://scenes/common/points.tscn"
 
 [display]
 

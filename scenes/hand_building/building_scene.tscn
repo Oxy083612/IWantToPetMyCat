@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://pc0tu2if1i0f"]
+[gd_scene load_steps=9 format=3 uid="uid://pc0tu2if1i0f"]
 
 [ext_resource type="Script" uid="uid://b5d6oo25t7k42" path="res://scripts/hand_building/building_scene.gd" id="1_k4vdf"]
 [ext_resource type="Script" uid="uid://qmuvmhb7i201" path="res://scripts/hand_building/tape_counter.gd" id="2_vmvnh"]
@@ -8,10 +8,6 @@
 [ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="12_y8toh"]
 [ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="13_2kv8c"]
 [ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="14_q8bcx"]
-
-[sub_resource type="GDScript" id="GDScript_mrgcu"]
-script/source = "extends TextureButton
-"
 
 [node name="BuildHandLevel" type="Node2D"]
 script = ExtResource("1_k4vdf")
@@ -126,14 +122,20 @@ offset_bottom = 575.0
 texture_normal = ExtResource("11_m46la")
 texture_pressed = ExtResource("12_y8toh")
 texture_hover = ExtResource("13_2kv8c")
-script = SubResource("GDScript_mrgcu")
 
 [node name="Label" type="Label" parent="Button"]
-layout_mode = 0
-offset_left = 96.0
-offset_top = 26.0
-offset_right = 196.0
-offset_bottom = 71.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -22.5
+offset_right = 56.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("14_q8bcx")
 theme_override_font_sizes/font_size = 36
 text = "FINISH"
@@ -154,11 +156,18 @@ texture_pressed = ExtResource("12_y8toh")
 texture_hover = ExtResource("13_2kv8c")
 
 [node name="Label" type="Label" parent="Undo"]
-layout_mode = 0
-offset_left = 26.0
-offset_top = 26.0
-offset_right = 278.0
-offset_bottom = 71.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -126.0
+offset_top = -22.5
+offset_right = 126.0
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_fonts/font = ExtResource("14_q8bcx")
 theme_override_font_sizes/font_size = 36
 text = "UNDO ITEM"

@@ -30,6 +30,11 @@ func _return_type(item: String):
 
 @export var tapes = 0
 
+func reset():
+	current_items = []
+	tapes = 0
+
+
 func add_item(item):
 	if(ItemsPool.items[item]["type"] == ItemsPool.item_types.tape):
 		tapes += 1

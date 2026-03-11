@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=22 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat/pat_pat_scene.gd" id="1_xkuku"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_qgess"]
@@ -16,6 +16,9 @@
 [ext_resource type="Texture2D" uid="uid://brisxnvilliwq" path="res://images/hud/Empty_Pasek.png" id="14_e2wja"]
 [ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="15_xkuku"]
 [ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="16_xkuku"]
+[ext_resource type="Texture2D" uid="uid://bkc87e72e52yy" path="res://images/hud/pusty.png" id="17_w1pfp"]
+[ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="18_ifaww"]
+[ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="19_kwxd5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -116,6 +119,41 @@ theme_override_fonts/font = ExtResource("16_xkuku")
 theme_override_font_sizes/font_size = 64
 text = "Points: 0"
 
+[node name="Finish" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1532.0
+offset_top = 101.0
+offset_right = 1832.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("17_w1pfp")
+texture_pressed = ExtResource("18_ifaww")
+texture_hover = ExtResource("19_kwxd5")
+
+[node name="Label" type="Label" parent="Finish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -22.5
+offset_right = 56.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_xkuku")
+theme_override_font_sizes/font_size = 36
+text = "FINISH"
+
 [connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="pressed" from="Finish" to="." method="_on_finish_pressed"]
