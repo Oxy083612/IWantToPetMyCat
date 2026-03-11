@@ -3,7 +3,7 @@ extends Node2D
 @onready var mouse_pressed = false
 @onready var mouse_in_circle = false
 @onready var last_mouse_position = Vector2(0, 0)
-@onready var purr_stream = $AudioStreamPlayer2D
+@onready var purr_stream = $AudioStreamPlayer
 @onready var purring = false
 @onready var cat_position = $Sprite2D.global_position
 @onready var cat_radius = $Sprite2D/Area2D/CollisionShape2D.shape.radius * 5
