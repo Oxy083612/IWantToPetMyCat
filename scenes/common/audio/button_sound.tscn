@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://nyvxhmapob7g"]
+
+[ext_resource type="AudioStream" uid="uid://dtkrqj8bkam2s" path="res://audio/1 scene_picking item.wav" id="1_e1rkr"]
+
+[node name="ButtonSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_e1rkr")
+volume_db = 10.0
+bus = &"SFX"

@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3r2cw87srkau"]
+
+[ext_resource type="Script" uid="uid://duecnl54fivp5" path="res://scripts/menu/credits.gd" id="1_0s65u"]
+[ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="1_drpar"]
+[ext_resource type="Texture2D" uid="uid://bkc87e72e52yy" path="res://images/hud/pusty.png" id="2_0s65u"]
+[ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="3_wobx1"]
+[ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="4_oh8hr"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0s65u")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(0, 0, 0, 1)
+
+[node name="VSplitContainer" type="VSplitContainer" parent="ColorRect"]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[node name="Label" type="Label" parent="ColorRect/VSplitContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_drpar")
+theme_override_font_sizes/font_size = 96
+text = "Authors"
+horizontal_alignment = 1
+
+[node name="VSplitContainer" type="VSplitContainer" parent="ColorRect/VSplitContainer"]
+layout_mode = 2
+
+[node name="HSplitContainer" type="HSplitContainer" parent="ColorRect/VSplitContainer/VSplitContainer"]
+custom_minimum_size = Vector2(0, 700)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ColorRect/VSplitContainer/VSplitContainer/HSplitContainer"]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("1_drpar")
+theme_override_font_sizes/font_size = 64
+text = "Programming
+
+Michał Durka
+Róża Zając"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ColorRect/VSplitContainer/VSplitContainer/HSplitContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_drpar")
+theme_override_font_sizes/font_size = 64
+text = "Graphics
+
+Anna Stąporek
+Milena \"azzartaa\""
+horizontal_alignment = 1
+
+[node name="BoxContainer" type="BoxContainer" parent="ColorRect/VSplitContainer/VSplitContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Return" type="TextureButton" parent="ColorRect/VSplitContainer/VSplitContainer/BoxContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+texture_normal = ExtResource("2_0s65u")
+texture_pressed = ExtResource("3_wobx1")
+texture_hover = ExtResource("4_oh8hr")
+
+[node name="Label" type="Label" parent="ColorRect/VSplitContainer/VSplitContainer/BoxContainer/Return"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -62.5
+offset_top = -22.5
+offset_right = 62.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("1_drpar")
+theme_override_font_sizes/font_size = 36
+text = "RETURN"
+
+[connection signal="pressed" from="ColorRect/VSplitContainer/VSplitContainer/BoxContainer/Return" to="." method="_on_return_pressed"]

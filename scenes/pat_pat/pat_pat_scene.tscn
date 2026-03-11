@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://b2lsqf32vstun"]
+[gd_scene load_steps=22 format=3 uid="uid://b2lsqf32vstun"]
 
 [ext_resource type="Script" uid="uid://cmvfhlsx54vwb" path="res://scripts/pat_pat/pat_pat_scene.gd" id="1_xkuku"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_qgess"]
@@ -12,7 +12,13 @@
 [ext_resource type="Texture2D" uid="uid://pv2lwjfwq0b" path="res://images/cat/Cat-8.png" id="10_etgun"]
 [ext_resource type="Texture2D" uid="uid://cm2c8e02r6rjk" path="res://images/cat/Cat-9.png" id="11_wy7qu"]
 [ext_resource type="Texture2D" uid="uid://dx7dj0j2nikhu" path="res://images/cat/Cat-10.png" id="12_k8tkf"]
-[ext_resource type="AudioStream" uid="uid://sov4j01vxe81" path="res://audio/cat_purractive_loop.wav" id="13_b2pyc"]
+[ext_resource type="AudioStream" uid="uid://c5gb550v25evy" path="res://audio/cat_purractive_loop.wav" id="13_b2pyc"]
+[ext_resource type="Texture2D" uid="uid://brisxnvilliwq" path="res://images/hud/Empty_Pasek.png" id="14_e2wja"]
+[ext_resource type="Texture2D" uid="uid://cemk4inpfa52n" path="res://images/hud/Full_Pasek_Niebieski.png" id="15_xkuku"]
+[ext_resource type="FontFile" uid="uid://crv5jtwp3l7f" path="res://fonts/PixelifySans-Regular.ttf" id="16_xkuku"]
+[ext_resource type="Texture2D" uid="uid://bkc87e72e52yy" path="res://images/hud/pusty.png" id="17_w1pfp"]
+[ext_resource type="Texture2D" uid="uid://c6y57hjyc41u0" path="res://images/hud/pusty_clic.png" id="18_ifaww"]
+[ext_resource type="Texture2D" uid="uid://bbjtp3arxbtvm" path="res://images/hud/pusty_hover.png" id="19_kwxd5"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_b64y2"]
 animations = [{
@@ -52,17 +58,6 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="Gradient" id="Gradient_2wknw"]
-interpolation_mode = 1
-offsets = PackedFloat32Array(0.0389611, 0.896104, 0.948052, 0.954545, 0.961039, 0.967532, 0.974026, 0.980519, 0.987013, 0.993506, 1)
-colors = PackedColorArray(0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 0.223529, 0.27451, 0.415686, 0.392157, 1, 1, 1, 0)
-
-[sub_resource type="GradientTexture2D" id="GradientTexture2D_b2pyc"]
-gradient = SubResource("Gradient_2wknw")
-fill = 1
-fill_from = Vector2(0.5, 0.5)
-fill_to = Vector2(0.5, 0)
-
 [sub_resource type="CircleShape2D" id="CircleShape2D_2wknw"]
 radius = 31.259
 
@@ -86,17 +81,94 @@ frame_progress = 0.766956
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1679, 580)
 scale = Vector2(8, 8)
-texture = SubResource("GradientTexture2D_b2pyc")
 
 [node name="Area2D" type="Area2D" parent="Sprite2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D"]
 shape = SubResource("CircleShape2D_2wknw")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("13_b2pyc")
+volume_db = 10.0
 bus = &"SFX"
+
+[node name="Bar" type="HBoxContainer" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 66.0
+offset_top = 593.0
+offset_right = 196.0
+offset_bottom = 682.0
+grow_horizontal = 2
+rotation = 4.71239
+scale = Vector2(4.5, 4.5)
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="Bar"]
+layout_mode = 2
+step = 0.0
+texture_under = ExtResource("14_e2wja")
+texture_progress = ExtResource("15_xkuku")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 28.0
+offset_top = 786.0
+offset_right = 293.0
+offset_bottom = 943.0
+theme_override_fonts/font = ExtResource("16_xkuku")
+theme_override_font_sizes/font_size = 64
+text = "Points: 0"
+
+[node name="Finish" type="TextureButton" parent="."]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 1532.0
+offset_top = 101.0
+offset_right = 1832.0
+offset_bottom = 201.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("17_w1pfp")
+texture_pressed = ExtResource("18_ifaww")
+texture_hover = ExtResource("19_kwxd5")
+
+[node name="Label" type="Label" parent="Finish"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -22.5
+offset_right = 56.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_xkuku")
+theme_override_font_sizes/font_size = 36
+text = "FINISH"
+
+[node name="Tip" type="BoxContainer" parent="."]
+offset_top = 1000.0
+offset_right = 480.0
+offset_bottom = 1040.0
+scale = Vector2(4, 4)
+size_flags_vertical = 8
+alignment = 1
+
+[node name="Label" type="Label" parent="Tip"]
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("16_xkuku")
+text = "hold click and move your mouse over the cat to pet it"
+horizontal_alignment = 1
 
 [connection signal="mouse_entered" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_entered"]
 [connection signal="mouse_exited" from="Sprite2D/Area2D" to="." method="_on_area_2d_mouse_exited"]
-[connection signal="finished" from="AudioStreamPlayer2D" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_2d_finished"]
+[connection signal="pressed" from="Finish" to="." method="_on_finish_pressed"]

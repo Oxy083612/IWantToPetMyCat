@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmmivnj4m5m8k"]
+
+[ext_resource type="AudioStream" uid="uid://cbivjgxmbqr74" path="res://audio/pick.wav" id="1_283c6"]
+
+[node name="PickSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_283c6")
+volume_db = 10.0
+bus = &"SFX"

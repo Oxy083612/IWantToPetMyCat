@@ -1,16 +1,13 @@
 extends TextureButton
-
-signal item_slot_pressed(item_name, item_ID
-
-)
+ 
+signal item_slot_pressed(item_name, item_ID)
+signal hand_error(description)
 
 var item_name = null
 var item_number = null
 var item_path = null
 var is_used = false
 var rng = RandomNumberGenerator.new()
-	
-
 
 
 func set_item(new_item, item_ID):
@@ -27,9 +24,14 @@ func set_item(new_item, item_ID):
 	
 
 func _on_pressed() -> void:
-	if not is_used and (Hand.get_child_count() == 0 or Equipment._return_type(Hand.get_child(Hand.get_child_count() - 1)._name) != 2):
-		if Equipment.tapes == 0:
+	if not is_used:
+		if Equipment.tapes == 0 and Hand.length > 0:
+			emit_signal("hand_error", "you don't have enough tapes!")
+			return
+		if Hand.get_child_count() > 0 and Equipment._return_type(Hand.get_child(Hand.get_child_count() - 1)._name) == 2:
+			emit_signal("hand_error", "the hand has an ending item already!")
 			return
 		emit_signal("item_slot_pressed", item_name, item_number)
 		is_used = true
 		self.set_modulate(Color(0.5, 0.5, 0.5))
+  

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmkrmra23j7me"]
+
+[ext_resource type="AudioStream" uid="uid://brci73db0otg8" path="res://audio/put.wav" id="1_2nwvf"]
+
+[node name="PutSound" type="AudioStreamPlayer"]
+stream = ExtResource("1_2nwvf")
+volume_db = 10.0
+bus = &"SFX"
