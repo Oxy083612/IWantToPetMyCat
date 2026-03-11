@@ -20,8 +20,11 @@ config/icon="res://icon.svg"
 ItemsPool="*res://scenes/common/items/items_pool.tscn"
 Equipment="*res://scenes/common/items/equipment.tscn"
 Hand="*res://scenes/common/items/hand.tscn"
-Music="*res://scenes/common/music.tscn"
+Music="*res://scenes/common/audio/music.tscn"
 Points="*res://scenes/common/points.tscn"
+ButtonSound="*res://scenes/common/audio/button_sound.tscn"
+PickSound="*res://scenes/common/audio/pick_sound.tscn"
+PutSound="*res://scenes/common/audio/put_sound.tscn"
 
 [display]
 

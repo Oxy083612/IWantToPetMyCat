@@ -12,13 +12,16 @@ func _ready():
 		Music.play()
 
 func _on_play_pressed() -> void:
+	ButtonSound.play()
 	get_tree().change_scene_to_file("res://scenes/item_gathering/gathering_scene.tscn")
 
 func _on_credits_pressed() -> void:
+	ButtonSound.play()
 	get_tree().change_scene_to_file("res://scenes/menu/credits.tscn")
 
 
 func _on_audio_pressed() -> void:
+	ButtonSound.play()
 	if is_audio_muted:
 		is_audio_muted = false
 		audio_label.text = "AUDIO ON"

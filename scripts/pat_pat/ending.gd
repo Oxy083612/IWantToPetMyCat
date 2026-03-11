@@ -18,4 +18,5 @@ func _on_menu_pressed() -> void:
 	Hand.reset()
 	Hand.show()
 	Music.stop()
+	ButtonSound.play()
 	get_tree().change_scene_to_file("res://scenes/menu/menu.tscn")

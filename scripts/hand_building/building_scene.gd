@@ -105,6 +105,7 @@ func create_item(item_name, item_ID, is_end):
 func _on_item_slot_pressed(item_name, item_ID):
 	if Equipment.tapes == 0 and Hand.length > 0:
 		return
+	PutSound.play()
 	var item_big
 	var sprite_tape = Sprite2D.new()
 	if Hand.get_child_count() == 0 or Equipment._return_type(Hand.get_child(Hand.get_child_count() - 1)._name) != 2:
@@ -134,12 +135,15 @@ func _input(event):
 		
 
 func _on_button_pressed() -> void:
+	ButtonSound.play()
 	get_tree().change_scene_to_file("res://scenes/pat_pat/pat_pat_scene.tscn")	
 
 
 func _on_undo_button_down() -> void:
+	ButtonSound.play()
 	if Hand.get_child_count() == 0:
 		return
+	PickSound.play()
 	tip_label.text = "click an item to add it to the hand"
 	var x = Hand.get_child(Hand.get_child_count() - 1)
 	var next_last_node: Node = null

@@ -8,6 +8,7 @@ const SPEED = 100
 @onready var area_2d: Area2D = $Area2D
 @onready var label_desc: Label = $"../HUDSearchItems/Label"
 @onready var character_body_2d: CharacterBody2D = $CharacterBody2D
+@onready var walk_sound = $"../WalkSound"
 
 @onready var level = get_parent()
 @onready var top_left = Vector2(353, 283)
@@ -47,6 +48,8 @@ func _physics_process(_delta: float) -> void:
 		elif input_direction[0] < 0:
 			play("walk_left")
 			dir = DIRECTION.left
+		if not walk_sound.playing:
+			walk_sound.play()
 	else:
 		match dir:
 			DIRECTION.right:
@@ -57,6 +60,8 @@ func _physics_process(_delta: float) -> void:
 				play("idle_front")
 			DIRECTION.back:
 				play("idle_back")
+		if walk_sound.playing:
+			walk_sound.stop()
 	character_body_2d.velocity = input_direction * SPEED
 	character_body_2d.apply_floor_snap()
 	character_body_2d.move_and_slide()
@@ -98,6 +103,7 @@ func _input(event):
 		label_desc.text = "take " + item_held + " to the table"
 		emit_signal("destroy_item", pickable_bodies[-1].get_instance_id())
 		pickable_bodies.erase(pickable_bodies[-1])
+		PickSound.play()
 		return
 	if item_held != null and is_near_table:
 		Equipment.add_item(item_held)
@@ -107,3 +113,4 @@ func _input(event):
 			emit_signal("show_item_name", pickable_bodies[-1].get_instance_id())
 		else:
 			label_desc.text = ""
+		PutSound.play()
