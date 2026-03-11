@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://bld3xdv1s1sma"]
+[gd_scene load_steps=21 format=3 uid="uid://bld3xdv1s1sma"]
 
 [ext_resource type="Script" uid="uid://cxn805n7lhph1" path="res://scripts/menu/menu.gd" id="1_rrod7"]
 [ext_resource type="Texture2D" uid="uid://d06r540ogx5fc" path="res://images/backgrounds/CatBC.png" id="2_faisu"]
@@ -57,6 +57,14 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_55a8x"]
+script/source = "extends TextureButton
+
+@onready var label = $Label
+@onready var is_muted = false
+
+"
+
 [node name="Menu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -87,6 +95,41 @@ sprite_frames = SubResource("SpriteFrames_vhsb5")
 animation = &"Cat doing cat stuff"
 autoplay = "Cat doing cat stuff"
 
+[node name="Audio" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -520.0
+offset_top = 110.0
+offset_right = -220.0
+offset_bottom = 210.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("15_55a8x")
+texture_pressed = ExtResource("16_rrod7")
+texture_hover = ExtResource("17_faisu")
+script = SubResource("GDScript_55a8x")
+
+[node name="Label" type="Label" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.5
+offset_top = -22.5
+offset_right = 56.5
+offset_bottom = 22.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("18_t2e6u")
+theme_override_font_sizes/font_size = 36
+text = "AUDIO ON"
+
 [node name="Play" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -95,9 +138,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -760.0
-offset_top = -40.0
+offset_top = -20.0
 offset_right = -460.0
-offset_bottom = 60.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("15_55a8x")
@@ -129,9 +172,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -280.0
-offset_top = -40.0
+offset_top = -20.0
 offset_right = 20.0
-offset_bottom = 60.0
+offset_bottom = 80.0
 grow_horizontal = 2
 grow_vertical = 2
 texture_normal = ExtResource("15_55a8x")
@@ -155,5 +198,6 @@ theme_override_fonts/font = ExtResource("18_t2e6u")
 theme_override_font_sizes/font_size = 36
 text = "CREDITS"
 
+[connection signal="pressed" from="Audio" to="." method="_on_audio_pressed"]
 [connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="Credits" to="." method="_on_credits_pressed"]
